@@ -1,0 +1,799 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nauval Ikram Wicaksono</title>
+  <meta name="description" content="Portfolio personal Nauval Ikram Wicaksono - Aspiring Web Developer & Digital Technology Explorer">
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- ============ NAVBAR ============ -->
+  <nav id="navbar">
+    <div class="nav-container">
+      <a href="#beranda" class="nav-logo">Nauval</a>
+      <div class="nav-links" id="navLinks">
+        <a href="#beranda" class="nav-link active">Beranda</a>
+        <a href="#tentang" class="nav-link">Tentang</a>
+        <a href="#keahlian" class="nav-link">Keahlian</a>
+        <a href="#portfolio" class="nav-link">Portfolio</a>
+        <a href="#cv" class="nav-link">CV</a>
+      </div>
+      <button class="nav-hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Mobile Sidebar -->
+  <div class="nav-overlay" id="navOverlay"></div>
+  <div class="nav-sidebar" id="navSidebar">
+    <a href="#beranda" class="sidebar-link active">Beranda</a>
+    <a href="#tentang" class="sidebar-link">Tentang</a>
+    <a href="#keahlian" class="sidebar-link">Keahlian</a>
+    <a href="#portfolio" class="sidebar-link">Portfolio</a>
+    <a href="#cv" class="sidebar-link">CV</a>
+    <div class="sidebar-footer">
+      <p>&copy; 2025 Nauval Ikram Wicaksono</p>
+    </div>
+  </div>
+
+  <!-- ============ HERO / BERANDA ============ -->
+  <section id="beranda" class="hero">
+    <div class="hero-bg">
+      <div class="orb orb-1"></div>
+      <div class="orb orb-2"></div>
+      <div class="orb orb-3"></div>
+      <div class="hero-grid"></div>
+    </div>
+
+    <div class="hero-content">
+      <div class="hero-inner">
+        <!-- Foto Profil -->
+        <div class="hero-photo reveal">
+          <div class="photo-glow"></div>
+          <div class="photo-border"></div>
+          <img src="assets/ChatGPT Image 6 Mei 2026, 10.00.20.png" alt="Nauval Ikram Wicaksono">
+        </div>
+
+        <!-- Teks -->
+        <div class="hero-text">
+          <p class="hero-greeting reveal" data-delay="0.3">Halo, saya</p>
+          <h1 class="hero-name reveal" data-delay="0.5">
+            <span class="gradient-text">Nauval Ikram</span>
+            <br>Wicaksono
+          </h1>
+          <p class="hero-tagline reveal" data-delay="0.7">Aspiring Web Developer &bull; Exploring Digital Technology</p>
+          <p class="hero-desc reveal" data-delay="0.9">
+            Saya adalah siswa SMK yang memiliki minat di bidang pengembangan web
+            dan teknologi digital. Saat ini saya fokus mempelajari pembuatan website
+            yang tidak hanya menarik secara tampilan, tetapi juga memiliki fungsi nyata,
+            mudah digunakan, dan bermanfaat bagi pengguna.
+          </p>
+          <div class="hero-buttons reveal" data-delay="1.1">
+            <a href="#portfolio" class="btn btn-primary">
+              Lihat Portfolio
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+            </a>
+            <a href="#kontak" class="btn btn-secondary">
+              Hubungi Saya
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" x2="21" y1="14" y2="3"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Scroll Indicator -->
+    <div class="scroll-indicator reveal" data-delay="1.5">
+      <span>Scroll</span>
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+    </div>
+  </section>
+
+  <!-- ============ TENTANG SAYA ============ -->
+  <section id="tentang" class="section">
+    <div class="section-container">
+      <!-- Section Title -->
+      <div class="section-header reveal">
+        <p class="section-subtitle">Perjalanan Saya</p>
+        <h2 class="section-title">Tentang Saya</h2>
+        <div class="section-line"></div>
+      </div>
+
+      <!-- Cerita & Pendidikan -->
+      <div class="about-grid">
+        <!-- Cerita -->
+        <div class="glass-card reveal reveal-left">
+          <div class="card-header">
+            <div class="card-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg>
+            </div>
+            <h3>Riwayat Keluarga</h3>
+          </div>
+          <div class="card-body">
+            <p>Saya merupakan anak pertama dari keluarga sederhana yang selalu mendukung saya untuk terus belajar dan berkembang. Dari lingkungan keluarga, saya terbiasa untuk mandiri, bertanggung jawab, dan berusaha memberikan yang terbaik dalam setiap hal yang saya lakukan.</p>
+          </div>
+        </div>
+
+        <!-- Pendidikan -->
+        <div class="glass-card reveal reveal-right">
+          <div class="card-header">
+            <div class="card-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+            </div>
+            <h3>Riwayat Pendidikan</h3>
+          </div>
+          <div class="card-body">
+            <div class="timeline">
+              <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                  <span class="timeline-year">2015 - 2021</span>
+                  <h4>SD Negeri Genuk 02, Ungaran Barat</h4>
+                  <p class="timeline-location">Kab. Semarang</p>
+                </div>
+              </div>
+              <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                  <span class="timeline-year">2021 - 2024</span>
+                  <h4>SMP Negeri 1 Ungaran</h4>
+                  <p class="timeline-location">Kab. Semarang</p>
+                </div>
+              </div>
+              <div class="timeline-item active">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                  <span class="timeline-year">2024 - Sekarang</span>
+                  <h4>SMK Negeri 7 Semarang &mdash; Sistem Informasi Jaringan Aplikasi</h4>
+                  <p class="timeline-location">Kota Semarang</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Hobi -->
+      <div class="hobbies-section reveal">
+        <h3 class="subsection-title">Hobi Saya</h3>
+        <div class="hobby-showcase">
+
+          <div class="hobby-showcase-item" data-hobby="coding">
+            <div class="hobby-showcase-bg">
+              <svg width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="rgba(16,185,129,0.15)" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+            </div>
+            <div class="hobby-showcase-icon">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+            </div>
+            <div class="hobby-showcase-content">
+              <h4>Coding</h4>
+              <p>Menulis kode dan membangun website dari nol. Menikmati proses problem-solving dan melihat hasil kerja nyata di browser.</p>
+            </div>
+          </div>
+
+          <div class="hobby-showcase-item" data-hobby="canva">
+            <div class="hobby-showcase-bg">
+              <svg width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="rgba(20,184,166,0.15)" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><circle cx="13.5" cy="6.5" r=".5"/><circle cx="17.5" cy="10.5" r=".5"/><circle cx="8.5" cy="7.5" r=".5"/><circle cx="6.5" cy="12.5" r=".5"/><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10c.926 0 1.648-.746 1.648-1.688 0-.437-.18-.835-.437-1.125-.29-.289-.438-.652-.438-1.125a1.64 1.64 0 0 1 1.668-1.668h1.996c3.051 0 5.555-2.503 5.555-5.554C21.965 6.012 17.461 2 12 2z"/></svg>
+            </div>
+            <div class="hobby-showcase-icon">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="13.5" cy="6.5" r=".5"/><circle cx="17.5" cy="10.5" r=".5"/><circle cx="8.5" cy="7.5" r=".5"/><circle cx="6.5" cy="12.5" r=".5"/><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10c.926 0 1.648-.746 1.648-1.688 0-.437-.18-.835-.437-1.125-.29-.289-.438-.652-.438-1.125a1.64 1.64 0 0 1 1.668-1.668h1.996c3.051 0 5.555-2.503 5.555-5.554C21.965 6.012 17.461 2 12 2z"/></svg>
+            </div>
+            <div class="hobby-showcase-content">
+              <h4>Desain Canva</h4>
+              <p>Membuat poster dan konten visual. Suka bereksperimen dengan warna, tipografi, dan komposisi desain.</p>
+            </div>
+          </div>
+
+          <div class="hobby-showcase-item" data-hobby="ml">
+            <div class="hobby-showcase-bg">
+              <svg width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="rgba(245,158,11,0.15)" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><line x1="6" x2="10" y1="11" y2="11"/><line x1="8" x2="8" y1="9" y2="13"/><line x1="15" x2="15.01" y1="12" y2="12"/><line x1="18" x2="18.01" y1="10" y2="10"/><path d="M17.32 5H6.68a4 4 0 0 0-3.978 3.59c-.006.052-.01.101-.017.152C2.604 9.416 2 14.456 2 16a3 3 0 0 0 3 3c1 0 1.5-.5 2-1l1.414-1.414A2 2 0 0 1 9.828 16h4.344a2 2 0 0 1 1.414.586L17 18c.5.5 1 1 2 1a3 3 0 0 0 3-3c0-1.545-.604-6.584-.685-7.258-.007-.05-.011-.1-.017-.151A4 4 0 0 0 17.32 5z"/></svg>
+            </div>
+            <div class="hobby-showcase-icon">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="6" x2="10" y1="11" y2="11"/><line x1="8" x2="8" y1="9" y2="13"/><line x1="15" x2="15.01" y1="12" y2="12"/><line x1="18" x2="18.01" y1="10" y2="10"/><path d="M17.32 5H6.68a4 4 0 0 0-3.978 3.59c-.006.052-.01.101-.017.152C2.604 9.416 2 14.456 2 16a3 3 0 0 0 3 3c1 0 1.5-.5 2-1l1.414-1.414A2 2 0 0 1 9.828 16h4.344a2 2 0 0 1 1.414.586L17 18c.5.5 1 1 2 1a3 3 0 0 0 3-3c0-1.545-.604-6.584-.685-7.258-.007-.05-.011-.1-.017-.151A4 4 0 0 0 17.32 5z"/></svg>
+            </div>
+            <div class="hobby-showcase-content">
+              <h4>Mobile Legends</h4>
+              <p>Bermain sebagai hiburan dan cara bersantai. Menikmati strategi tim dan koordinasi antar pemain.</p>
+            </div>
+          </div>
+
+          <div class="hobby-showcase-item" data-hobby="hiking">
+            <div class="hobby-showcase-bg">
+              <svg width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="rgba(52,211,153,0.15)" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><path d="m8 3 4 8 5-5 5 15H2L8 3z"/></svg>
+            </div>
+            <div class="hobby-showcase-icon">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m8 3 4 8 5-5 5 15H2L8 3z"/></svg>
+            </div>
+            <div class="hobby-showcase-content">
+              <h4>Hiking</h4>
+              <p>Mendaki gunung dan menjelajahi alam terbuka. Mengajarkan ketekunan, keberanian, dan menghargai alam.</p>
+            </div>
+          </div>
+
+          <div class="hobby-showcase-item" data-hobby="bola">
+            <div class="hobby-showcase-bg">
+              <svg width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="rgba(59,130,246,0.15)" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/><path d="M2 12h20"/></svg>
+            </div>
+            <div class="hobby-showcase-icon">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/><path d="M2 12h20"/></svg>
+            </div>
+            <div class="hobby-showcase-content">
+              <h4>Menonton Bola</h4>
+              <p>Menikmati pertandingan sepak bola, mengikuti perkembangan liga dan tim favorit dengan penuh semangat.</p>
+            </div>
+          </div>
+
+
+        </div>
+      </div>
+
+      <!-- Minat & Keahlian Ringkas -->
+      <!-- Minat, Kelebihan, Cita-cita — layout baru -->
+      <div class="about-trio reveal">
+
+        <!-- Card 1: Minat — dengan highlight besar -->
+        <div class="trio-card trio-card--minat glass-card">
+          <div class="trio-card-glow"></div>
+          <p class="trio-label">Minat & Ketertarikan</p>
+          <div class="trio-minat-list">
+            <div class="trio-minat-item">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="18" x="3" y="3" rx="2"/><path d="M3 9h18"/><path d="M9 21V9"/></svg>
+              Web Development
+            </div>
+            <div class="trio-minat-item">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.376 3.622a1 1 0 0 1 3.002 3.002L7.368 18.635a2 2 0 0 1-.855.506l-2.872.838a.5.5 0 0 1-.62-.62l.838-2.872a2 2 0 0 1 .506-.855z"/></svg>
+              UI/UX Design
+            </div>
+            <div class="trio-minat-item">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.55a11 11 0 0 1 14.08 0"/><path d="M1.42 9a16 16 0 0 1 21.16 0"/><path d="M8.53 16.11a6 6 0 0 1 6.95 0"/><line x1="12" x2="12.01" y1="20" y2="20"/></svg>
+              Jaringan Komputer
+            </div>
+            <div class="trio-minat-item">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="14" x="2" y="3" rx="2"/><line x1="8" x2="16" y1="21" y2="21"/><line x1="12" x2="12" y1="17" y2="21"/></svg>
+              Teknologi Digital
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 2: Kelebihan — skill bars -->
+        <div class="trio-card trio-card--skill glass-card">
+          <div class="trio-card-glow trio-card-glow--teal"></div>
+          <p class="trio-label">Kelebihan Diri</p>
+          <div class="trio-skill-bars">
+            <div class="trio-bar-item">
+              <div class="trio-bar-top"><span>HTML & CSS</span><span>70%</span></div>
+              <div class="trio-bar-track"><div class="trio-bar-fill" style="width:70%"></div></div>
+            </div>
+            <div class="trio-bar-item">
+              <div class="trio-bar-top"><span>Canva</span><span>75%</span></div>
+              <div class="trio-bar-track"><div class="trio-bar-fill" style="width:75%"></div></div>
+            </div>
+            <div class="trio-bar-item">
+              <div class="trio-bar-top"><span>Jaringan Dasar</span><span>65%</span></div>
+              <div class="trio-bar-track"><div class="trio-bar-fill" style="width:65%"></div></div>
+            </div>
+          </div>
+          <div class="trio-soft-tags">
+            <span class="tag tag-teal">Disiplin</span>
+            <span class="tag tag-teal">Mandiri</span>
+            <span class="tag tag-teal">Tanggung Jawab</span>
+          </div>
+        </div>
+
+        <!-- Card 3: Cita-cita — quote style -->
+        <div class="trio-card trio-card--cita glass-card">
+          <div class="trio-card-glow trio-card-glow--dim"></div>
+          <p class="trio-label">Cita-cita & Karier</p>
+          <div class="trio-cita-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><path d="m9 11 3 3L22 4"/></svg>
+          </div>
+          <p class="trio-cita-text">Terus mengembangkan kemampuan di bidang teknologi — khususnya web dan jaringan — dan berkontribusi nyata di dunia digital.</p>
+          <div class="trio-cita-badge">Web Developer</div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ KEAHLIAN ============ -->
+  <section id="keahlian" class="section">
+    <div class="section-container">
+      <div class="section-header reveal">
+        <p class="section-subtitle">Kemampuan</p>
+        <h2 class="section-title">Keahlian</h2>
+        <div class="section-line"></div>
+      </div>
+
+      <div class="glass-card skills-card reveal">
+        <div class="skill-item" data-percent="70">
+          <div class="skill-info">
+            <div>
+              <h4 class="skill-name">UI/UX Design</h4>
+              <p class="skill-desc">Mendesain tampilan antarmuka yang intuitif dan menarik</p>
+            </div>
+            <span class="skill-percent">70%</span>
+          </div>
+          <div class="skill-bar">
+            <div class="skill-bar-fill"></div>
+          </div>
+        </div>
+
+        <div class="skill-item" data-percent="60">
+          <div class="skill-info">
+            <div>
+              <h4 class="skill-name">Frontend Development</h4>
+              <p class="skill-desc">Membangun halaman web dengan HTML, CSS, dan JavaScript</p>
+            </div>
+            <span class="skill-percent">60%</span>
+          </div>
+          <div class="skill-bar">
+            <div class="skill-bar-fill"></div>
+          </div>
+        </div>
+
+        <div class="skill-item" data-percent="70">
+          <div class="skill-info">
+            <div>
+              <h4 class="skill-name">Jaringan Komputer</h4>
+              <p class="skill-desc">Memahami konsep dasar jaringan dan infrastruktur</p>
+            </div>
+            <span class="skill-percent">70%</span>
+          </div>
+          <div class="skill-bar">
+            <div class="skill-bar-fill"></div>
+          </div>
+        </div>
+
+        <div class="skill-item" data-percent="60">
+          <div class="skill-info">
+            <div>
+              <h4 class="skill-name">Editing & Desain</h4>
+              <p class="skill-desc">Mengedit dan membuat konten visual menggunakan Canva</p>
+            </div>
+            <span class="skill-percent">60%</span>
+          </div>
+          <div class="skill-bar">
+            <div class="skill-bar-fill"></div>
+          </div>
+        </div>
+      </div>
+
+      <p class="skills-note reveal">Terus belajar dan mengembangkan kemampuan setiap hari</p>
+    </div>
+  </section>
+
+  <!-- ============ PORTFOLIO ============ -->
+  <section id="portfolio" class="section">
+    <div class="section-container">
+      <div class="section-header reveal">
+        <p class="section-subtitle">Karya Saya</p>
+        <h2 class="section-title">Portfolio</h2>
+        <div class="section-line"></div>
+      </div>
+
+      <!-- Tab Navbar -->
+      <div class="porto-tabs reveal">
+        <button class="porto-tab active" data-tab="website">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="14" x="2" y="3" rx="2"/><line x1="8" x2="16" y1="21" y2="21"/><line x1="12" x2="12" y1="17" y2="21"/></svg>
+          Website
+        </button>
+        <button class="porto-tab" data-tab="iot">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.376 3.622a1 1 0 0 1 3.002 3.002L7.368 18.635a2 2 0 0 1-.855.506l-2.872.838a.5.5 0 0 1-.62-.62l.838-2.872a2 2 0 0 1 .506-.855z"/></svg>
+          IoT
+        </button>
+        <button class="porto-tab" data-tab="desain">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="13.5" cy="6.5" r=".5"/><circle cx="17.5" cy="10.5" r=".5"/><circle cx="8.5" cy="7.5" r=".5"/><circle cx="6.5" cy="12.5" r=".5"/><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10c.926 0 1.648-.746 1.648-1.688 0-.437-.18-.835-.437-1.125-.29-.289-.438-.652-.438-1.125a1.64 1.64 0 0 1 1.668-1.668h1.996c3.051 0 5.555-2.503 5.555-5.554C21.965 6.012 17.461 2 12 2z"/></svg>
+          Desain
+        </button>
+        <button class="porto-tab" data-tab="sertifikat">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><path d="m9 11 3 3L22 4"/></svg>
+          Sertifikat
+        </button>
+      </div>
+
+      <!-- ===== TAB: WEBSITE ===== -->
+      <!-- Layout: item1 besar kiri (row span 2) | item2 kanan atas | item3 kanan bawah kecil | item4 bawah lebar -->
+      <div class="porto-panel active" data-panel="website">
+        <div class="porto-mosaic porto-mosaic--a">
+          <div class="porto-item porto-item--a1" data-preview="kotasemarang">
+            <div class="porto-item-bg" style="background-image: url('assets/Screenshot 2026-05-05 193023.png')"></div>
+            <div class="porto-item-overlay"></div>
+            <div class="porto-item-marquee"><span>kotasemarangku &nbsp;·&nbsp; kotasemarangku &nbsp;·&nbsp; kotasemarangku &nbsp;·&nbsp; kotasemarangku &nbsp;·&nbsp;</span></div>
+            <div class="porto-item-meta"><span class="porto-item-cat">Website</span><span class="porto-item-year">2025</span></div>
+            <div class="porto-item-info"><h3>kotasemarangku</h3><span class="porto-item-num">01</span></div>
+            <div class="porto-item-hover-detail"><p>Website informatif tentang Kota Semarang — sejarah, budaya, wisata, dan kuliner.</p><a href="https://kotasemarangku.wuaze.com/kuliner.html" target="_blank" rel="noopener noreferrer" class="porto-item-link">Lihat Karya →</a></div>
+          </div>
+          <div class="porto-item porto-item--a2 porto-item--coming">
+            <div class="porto-item-overlay"></div>
+            <div class="porto-item-meta"><span class="porto-item-cat">Website</span><span class="porto-item-year">—</span></div>
+            <div class="porto-item-info"><h3>Coming Soon</h3><span class="porto-item-num">02</span></div>
+            <div class="porto-item-hover-detail"><p>Proyek website berikutnya sedang dalam pengembangan.</p></div>
+          </div>
+          <div class="porto-item porto-item--a3 porto-item--coming">
+            <div class="porto-item-overlay"></div>
+            <div class="porto-item-meta"><span class="porto-item-cat">Website</span><span class="porto-item-year">—</span></div>
+            <div class="porto-item-info"><h3>Coming Soon</h3><span class="porto-item-num">03</span></div>
+            <div class="porto-item-hover-detail"><p>Proyek website berikutnya sedang dalam pengembangan.</p></div>
+          </div>
+          <div class="porto-item porto-item--a4 porto-item--coming">
+            <div class="porto-item-overlay"></div>
+            <div class="porto-item-meta"><span class="porto-item-cat">Website</span><span class="porto-item-year">—</span></div>
+            <div class="porto-item-info"><h3>Coming Soon</h3><span class="porto-item-num">04</span></div>
+            <div class="porto-item-hover-detail"><p>Proyek website berikutnya sedang dalam pengembangan.</p></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ===== TAB: IoT ===== -->
+      <!-- Layout: item1 lebar atas | item2 kanan atas kecil | item3 kiri bawah kecil | item4 besar kanan bawah -->
+      <div class="porto-panel" data-panel="iot">
+        <div class="porto-mosaic porto-mosaic--b">
+          <div class="porto-item porto-item--b1 porto-item--coming">
+            <div class="porto-item-overlay"></div>
+            <div class="porto-item-meta"><span class="porto-item-cat">IoT</span><span class="porto-item-year">—</span></div>
+            <div class="porto-item-info"><h3>Coming Soon</h3><span class="porto-item-num">01</span></div>
+            <div class="porto-item-hover-detail"><p>Proyek IoT sedang dalam pengembangan.</p></div>
+          </div>
+          <div class="porto-item porto-item--b2 porto-item--coming">
+            <div class="porto-item-overlay"></div>
+            <div class="porto-item-meta"><span class="porto-item-cat">IoT</span><span class="porto-item-year">—</span></div>
+            <div class="porto-item-info"><h3>Coming Soon</h3><span class="porto-item-num">02</span></div>
+            <div class="porto-item-hover-detail"><p>Proyek IoT sedang dalam pengembangan.</p></div>
+          </div>
+          <div class="porto-item porto-item--b3 porto-item--coming">
+            <div class="porto-item-overlay"></div>
+            <div class="porto-item-meta"><span class="porto-item-cat">IoT</span><span class="porto-item-year">—</span></div>
+            <div class="porto-item-info"><h3>Coming Soon</h3><span class="porto-item-num">03</span></div>
+            <div class="porto-item-hover-detail"><p>Proyek IoT sedang dalam pengembangan.</p></div>
+          </div>
+          <div class="porto-item porto-item--b4 porto-item--coming">
+            <div class="porto-item-overlay"></div>
+            <div class="porto-item-meta"><span class="porto-item-cat">IoT</span><span class="porto-item-year">—</span></div>
+            <div class="porto-item-info"><h3>Coming Soon</h3><span class="porto-item-num">04</span></div>
+            <div class="porto-item-hover-detail"><p>Proyek IoT sedang dalam pengembangan.</p></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ===== TAB: DESAIN ===== -->
+      <!-- Layout: item1 kecil kiri atas | item2 besar tengah (row span 2) | item3 kecil kanan atas | item4 lebar bawah -->
+      <div class="porto-panel" data-panel="desain">
+        <div class="porto-mosaic porto-mosaic--c">
+          <div class="porto-item porto-item--c1 porto-item--coming">
+            <div class="porto-item-overlay"></div>
+            <div class="porto-item-meta"><span class="porto-item-cat">Desain</span><span class="porto-item-year">—</span></div>
+            <div class="porto-item-info"><h3>Coming Soon</h3><span class="porto-item-num">01</span></div>
+            <div class="porto-item-hover-detail"><p>Karya desain sedang dalam pengembangan.</p></div>
+          </div>
+          <div class="porto-item porto-item--c2 porto-item--coming">
+            <div class="porto-item-overlay"></div>
+            <div class="porto-item-meta"><span class="porto-item-cat">Desain</span><span class="porto-item-year">—</span></div>
+            <div class="porto-item-info"><h3>Coming Soon</h3><span class="porto-item-num">02</span></div>
+            <div class="porto-item-hover-detail"><p>Karya desain sedang dalam pengembangan.</p></div>
+          </div>
+          <div class="porto-item porto-item--c3 porto-item--coming">
+            <div class="porto-item-overlay"></div>
+            <div class="porto-item-meta"><span class="porto-item-cat">Desain</span><span class="porto-item-year">—</span></div>
+            <div class="porto-item-info"><h3>Coming Soon</h3><span class="porto-item-num">03</span></div>
+            <div class="porto-item-hover-detail"><p>Karya desain sedang dalam pengembangan.</p></div>
+          </div>
+          <div class="porto-item porto-item--c4 porto-item--coming">
+            <div class="porto-item-overlay"></div>
+            <div class="porto-item-meta"><span class="porto-item-cat">Desain</span><span class="porto-item-year">—</span></div>
+            <div class="porto-item-info"><h3>Coming Soon</h3><span class="porto-item-num">04</span></div>
+            <div class="porto-item-hover-detail"><p>Karya desain sedang dalam pengembangan.</p></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ===== TAB: SERTIFIKAT ===== -->
+      <!-- Layout: item1+2 baris atas (50/50) | item3 besar kiri bawah | item4 kecil kanan bawah -->
+      <div class="porto-panel" data-panel="sertifikat">
+        <div class="porto-mosaic porto-mosaic--d">
+          <div class="porto-item porto-item--d1 porto-item--coming">
+            <div class="porto-item-overlay"></div>
+            <div class="porto-item-meta"><span class="porto-item-cat">Sertifikat</span><span class="porto-item-year">—</span></div>
+            <div class="porto-item-info"><h3>Coming Soon</h3><span class="porto-item-num">01</span></div>
+            <div class="porto-item-hover-detail"><p>Sertifikat akan segera ditambahkan.</p></div>
+          </div>
+          <div class="porto-item porto-item--d2 porto-item--coming">
+            <div class="porto-item-overlay"></div>
+            <div class="porto-item-meta"><span class="porto-item-cat">Sertifikat</span><span class="porto-item-year">—</span></div>
+            <div class="porto-item-info"><h3>Coming Soon</h3><span class="porto-item-num">02</span></div>
+            <div class="porto-item-hover-detail"><p>Sertifikat akan segera ditambahkan.</p></div>
+          </div>
+          <div class="porto-item porto-item--d3 porto-item--coming">
+            <div class="porto-item-overlay"></div>
+            <div class="porto-item-meta"><span class="porto-item-cat">Sertifikat</span><span class="porto-item-year">—</span></div>
+            <div class="porto-item-info"><h3>Coming Soon</h3><span class="porto-item-num">03</span></div>
+            <div class="porto-item-hover-detail"><p>Sertifikat akan segera ditambahkan.</p></div>
+          </div>
+          <div class="porto-item porto-item--d4 porto-item--coming">
+            <div class="porto-item-overlay"></div>
+            <div class="porto-item-meta"><span class="porto-item-cat">Sertifikat</span><span class="porto-item-year">—</span></div>
+            <div class="porto-item-info"><h3>Coming Soon</h3><span class="porto-item-num">04</span></div>
+            <div class="porto-item-hover-detail"><p>Sertifikat akan segera ditambahkan.</p></div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ============ CURRICULUM VITAE ============ -->
+  <section id="cv" class="section">
+    <div class="section-container">
+      <div class="section-header reveal">
+        <p class="section-subtitle">Data Lengkap</p>
+        <h2 class="section-title">Curriculum Vitae</h2>
+        <div class="section-line"></div>
+      </div>
+
+      <div class="cv-card glass-card reveal">
+        <!-- CV Header -->
+        <div class="cv-header">
+          <div class="cv-photo">
+            <div class="cv-photo-border"></div>
+            <img src="assets/ChatGPT Image 6 Mei 2026, 10.00.20.png" alt="Nauval Ikram Wicaksono">
+          </div>
+          <div class="cv-header-text">
+            <h3>Nauval Ikram Wicaksono</h3>
+            <p class="cv-role">Aspiring Web Developer</p>
+            <p class="cv-school">Siswa SMK Negeri 7 Semarang &mdash; Sistem Informasi Jaringan Aplikasi</p>
+          </div>
+        </div>
+
+        <div class="cv-body">
+          <div class="cv-col-left">
+            <!-- Data Pribadi -->
+            <div class="cv-section">
+              <h4 class="cv-section-title">
+                <span class="cv-section-line"></span>
+                Data Pribadi
+              </h4>
+              <div class="cv-data-list">
+                <div class="cv-data-item">
+                  <div class="cv-data-icon">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M20 21a8 8 0 1 0-16 0"/></svg>
+                  </div>
+                  <div>
+                    <p class="cv-data-label">Nama Lengkap</p>
+                    <p class="cv-data-value">Nauval Ikram Wicaksono</p>
+                  </div>
+                </div>
+                <div class="cv-data-item">
+                  <div class="cv-data-icon">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+                  </div>
+                  <div>
+                    <p class="cv-data-label">Kota</p>
+                    <p class="cv-data-value">Semarang, Jawa Tengah</p>
+                  </div>
+                </div>
+                <div class="cv-data-item">
+                  <div class="cv-data-icon">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="18" x="3" y="4" rx="2"/><line x1="16" x2="16" y1="2" y2="6"/><line x1="8" x2="8" y1="2" y2="6"/><line x1="3" x2="21" y1="10" y2="10"/></svg>
+                  </div>
+                  <div>
+                    <p class="cv-data-label">Tanggal Lahir</p>
+                    <p class="cv-data-value">21 November 2008</p>
+                  </div>
+                </div>
+                <div class="cv-data-item">
+                  <div class="cv-data-icon">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+                  </div>
+                  <div>
+                    <p class="cv-data-label">Sekolah</p>
+                    <p class="cv-data-value">SMK Negeri 7 Semarang</p>
+                  </div>
+                </div>
+                <div class="cv-data-item">
+                  <div class="cv-data-icon">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+                  </div>
+                  <div>
+                    <p class="cv-data-label">Email</p>
+                    <p class="cv-data-value">nauvalikramwicaksono@gmail.com</p>
+                  </div>
+                </div>
+                <div class="cv-data-item">
+                  <div class="cv-data-icon">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                  </div>
+                  <div>
+                    <p class="cv-data-label">Telepon</p>
+                    <p class="cv-data-value">+62-888-3973-694</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Keahlian -->
+            <div class="cv-section">
+              <h4 class="cv-section-title">
+                <span class="cv-section-line"></span>
+                Keahlian
+              </h4>
+              <div class="cv-skills-list">
+                <div class="cv-skill-bar-item">
+                  <div class="cv-skill-bar-header">
+                    <span class="cv-skill-bar-name">UI/UX Design</span>
+                    <span class="cv-skill-bar-pct">70%</span>
+                  </div>
+                  <div class="cv-skill-bar-track"><div class="cv-skill-bar-fill" style="width:70%"></div></div>
+                </div>
+                <div class="cv-skill-bar-item">
+                  <div class="cv-skill-bar-header">
+                    <span class="cv-skill-bar-name">Frontend (HTML &amp; CSS)</span>
+                    <span class="cv-skill-bar-pct">60%</span>
+                  </div>
+                  <div class="cv-skill-bar-track"><div class="cv-skill-bar-fill" style="width:60%"></div></div>
+                </div>
+                <div class="cv-skill-bar-item">
+                  <div class="cv-skill-bar-header">
+                    <span class="cv-skill-bar-name">Jaringan Komputer</span>
+                    <span class="cv-skill-bar-pct">70%</span>
+                  </div>
+                  <div class="cv-skill-bar-track"><div class="cv-skill-bar-fill" style="width:70%"></div></div>
+                </div>
+                <div class="cv-skill-bar-item">
+                  <div class="cv-skill-bar-header">
+                    <span class="cv-skill-bar-name">Editing / Desain Canva</span>
+                    <span class="cv-skill-bar-pct">60%</span>
+                  </div>
+                  <div class="cv-skill-bar-track"><div class="cv-skill-bar-fill" style="width:60%"></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="cv-col-right">
+            <!-- Tentang Saya -->
+            <div class="cv-section">
+              <h4 class="cv-section-title">
+                <span class="cv-section-line"></span>
+                Tentang Saya
+              </h4>
+              <p class="cv-about-text">Saya adalah siswa SMK Negeri 7 Semarang jurusan Sistem Informasi Jaringan Aplikasi yang memiliki minat di bidang pengembangan web dan teknologi digital. Saya berfokus pada pembuatan website yang menarik, fungsional, dan bermanfaat, serta terus mengembangkan kemampuan setiap harinya.</p>
+            </div>
+
+            <!-- Riwayat Pendidikan -->
+            <div class="cv-section">
+              <h4 class="cv-section-title">
+                <span class="cv-section-line"></span>
+                Riwayat Pendidikan
+              </h4>
+              <div class="cv-edu-list">
+                <div class="cv-edu-item active">
+                  <div class="cv-edu-content">
+                    <h5>SMK Negeri 7 Semarang</h5>
+                    <p>Sistem Informasi Jaringan Aplikasi &mdash; Kota Semarang</p>
+                  </div>
+                  <span class="cv-edu-year">2024 - Sekarang</span>
+                </div>
+                <div class="cv-edu-item">
+                  <div class="cv-edu-content">
+                    <h5>SMP Negeri 1 Ungaran</h5>
+                    <p>Kab. Semarang</p>
+                  </div>
+                  <span class="cv-edu-year">2021 - 2024</span>
+                </div>
+                <div class="cv-edu-item">
+                  <div class="cv-edu-content">
+                    <h5>SD Negeri Genuk 02, Ungaran Barat</h5>
+                    <p>Kab. Semarang</p>
+                  </div>
+                  <span class="cv-edu-year">2015 - 2021</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Quote -->
+            <div class="cv-quote">
+              <svg class="quote-icon" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21c3 0 7-1 7-8V5c0-1.25-.756-2.017-2-2H4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2 1 0 1 0 1 1v1c0 1-1 2-2 2s-1 .008-1 1.031V21z"/><path d="M15 21c3 0 7-1 7-8V5c0-1.25-.757-2.017-2-2h-4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2h.75c0 2.25.25 4-2.75 4v3z"/></svg>
+              <div class="quote-text">
+                <p>&ldquo;Hidup ini sebenarnya sederhana, tetapi kita bersikeras membuatnya menjadi rumit.&rdquo;</p>
+                <span>&mdash; Konfusius</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="footer" id="kontak">
+    <div class="footer-line"></div>
+    <div class="footer-content">
+      <div class="section-container">
+
+        <div class="footer-grid reveal">
+
+          <!-- Kolom 1: Brand + Deskripsi -->
+          <div class="footer-brand-col">
+            <div class="footer-brand-wrap">
+              <p class="footer-brand-name">
+                <span class="gradient-text">Nauval Ikram</span><br>Wicaksono
+              </p>
+            </div>
+            <p class="footer-brand-tagline">Aspiring Web Developer &bull; Exploring Digital Technology</p>
+          </div>
+
+          <!-- Kolom 2: Hubungi Kami -->
+          <div class="footer-contact-col">
+            <p class="footer-col-title">Hubungi Kami</p>
+            <div class="footer-contact-list">
+              <a href="mailto:nauvalikramwicaksono@gmail.com" class="footer-contact-item">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+                nauvalikramwicaksono@gmail.com
+              </a>
+              <a href="https://wa.me/628883973694" target="_blank" rel="noopener noreferrer" class="footer-contact-item">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+                +62-888-3973-694
+              </a>
+              <span class="footer-contact-item no-link">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+                Semarang, Jawa Tengah
+              </span>
+            </div>
+          </div>
+
+          <!-- Kolom 3: Media Sosial -->
+          <div class="footer-social-col">
+            <p class="footer-col-title">Media Sosial</p>
+            <div class="footer-socials">
+              <a href="https://wa.me/628883973694" target="_blank" rel="noopener noreferrer" class="social-icon-btn" aria-label="WhatsApp">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+              </a>
+              <a href="mailto:nauvalikramwicaksono@gmail.com" class="social-icon-btn" aria-label="Email">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+              </a>
+              <a href="https://instagram.com/" target="_blank" rel="noopener noreferrer" class="social-icon-btn" aria-label="Instagram">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
+              </a>
+              <a href="tel:+628883973694" class="social-icon-btn" aria-label="Telepon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              </a>
+            </div>
+          </div>
+
+          <!-- Kolom 4: Navigasi -->
+          <div class="footer-nav-col">
+            <nav class="footer-nav-list">
+              <a href="#beranda" class="footer-nav-link">Beranda</a>
+              <a href="#tentang" class="footer-nav-link">Tentang</a>
+              <a href="#keahlian" class="footer-nav-link">Keahlian</a>
+              <a href="#portfolio" class="footer-nav-link">Portfolio</a>
+              <a href="#cv" class="footer-nav-link">CV</a>
+            </nav>
+          </div>
+
+        </div>
+
+        <!-- Bottom bar -->
+        <div class="footer-divider"></div>
+        <div class="footer-bottom">
+          <p>&copy; 2026 Nauval Ikram Wicaksono &mdash; Semua hak dilindungi.</p>
+          <button class="btn-top" onclick="window.scrollTo({top:0,behavior:'smooth'})">
+            Kembali ke Atas
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m18 15-6-6-6 6"/></svg>
+          </button>
+        </div>
+
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

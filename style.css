@@ -864,54 +864,59 @@ a {
   align-items: center;
   justify-content: center;
 }
-.hobby-showcase-bg svg {
-  width: 120px;
-  height: 120px;
-  transition: transform 0.5s ease, opacity 0.4s ease;
-  opacity: 0.4;
+.hobby-bg-img {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  opacity: 0.25;
+  transition: opacity 0.5s ease, transform 0.6s ease;
+  transform: scale(1.05);
 }
-.hobby-showcase-item:hover .hobby-showcase-bg svg {
-  transform: scale(1.4) translateY(-10px);
-  opacity: 0.7;
+.hobby-showcase-item:hover .hobby-bg-img {
+  opacity: 0.55;
+  transform: scale(1.12);
+}
+.hobby-showcase-bg svg {
+  display: none;
+}
+.hobby-showcase-icon {
+  display: none;
+}
 }
 
-/* Ikon kecil di atas */
-.hobby-showcase-icon {
-  position: absolute;
-  top: 16px;
-  left: 16px;
-  width: 40px;
-  height: 40px;
-  border-radius: 10px;
-  background: rgba(16,185,129,0.12);
-  border: 1px solid rgba(16,185,129,0.2);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: var(--accent);
-  z-index: 2;
-  transition: transform 0.4s ease, background 0.3s ease;
-}
-.hobby-showcase-item:hover .hobby-showcase-icon {
-  transform: scale(1.15);
-  background: rgba(16,185,129,0.22);
-}
+
+
 
 /* Konten bawah */
 .hobby-showcase-content {
   position: relative;
   z-index: 2;
-  padding: 16px;
-  background: linear-gradient(to top, rgba(10,10,10,0.95) 0%, rgba(10,10,10,0.4) 70%, transparent 100%);
+  padding: 20px 16px 16px;
+  background: linear-gradient(to top, rgba(10,10,10,0.97) 0%, rgba(10,10,10,0.6) 60%, transparent 100%);
+  transform: translateY(4px);
+  transition: transform 0.4s ease;
+}
+.hobby-showcase-item:hover .hobby-showcase-content {
+  transform: translateY(0);
 }
 .hobby-showcase-content h4 {
-  font-size: 0.95rem;
+  font-size: 1rem;
   font-weight: 700;
   color: var(--text);
   margin-bottom: 0;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+  opacity: 0;
+  transform: translateY(6px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+.hobby-showcase-item:hover .hobby-showcase-content h4 {
+  white-space: normal;
+  margin-bottom: 6px;
+  opacity: 1;
+  transform: translateY(0);
 }
 .hobby-showcase-content p {
   font-size: 0.8rem;
@@ -922,10 +927,6 @@ a {
   opacity: 0;
   margin-top: 0;
   transition: max-height 0.4s ease, opacity 0.35s ease 0.1s, margin-top 0.3s ease;
-}
-.hobby-showcase-item:hover .hobby-showcase-content h4 {
-  white-space: normal;
-  margin-bottom: 6px;
 }
 .hobby-showcase-item:hover .hobby-showcase-content p {
   max-height: 100px;

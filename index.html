@@ -1,1014 +1,820 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>CircleMath — Media Pembelajaran Lingkaran SMA/SMK</title>
-  <link rel="stylesheet" href="style.css" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nauval Ikram Wicaksono</title>
+  <meta name="description" content="Portfolio personal Nauval Ikram Wicaksono - Aspiring Web Developer & Digital Technology Explorer">
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
 
-<!-- PRELOADER -->
-<div id="preloader">
-  <div class="preloader-inner">
-    <svg class="preloader-circle" viewBox="0 0 100 100">
-      <circle cx="50" cy="50" r="40" fill="none" stroke="url(#grad1)" stroke-width="4" stroke-dasharray="251" stroke-dashoffset="251"/>
-      <defs>
-        <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
-          <stop offset="0%" style="stop-color:#6C63FF"/>
-          <stop offset="100%" style="stop-color:#00D4FF"/>
-        </linearGradient>
-      </defs>
-    </svg>
-    <p class="preloader-text">BunderMath</p>
-  </div>
-</div>
-
-<!-- NAVBAR -->
-<nav id="navbar">
-  <div class="nav-container">
-    <div class="nav-logo">
-      <svg width="32" height="32" viewBox="0 0 32 32"><circle cx="16" cy="16" r="13" fill="none" stroke="url(#ng)" stroke-width="2.5"/><circle cx="16" cy="16" r="5" fill="url(#ng)"/><defs><linearGradient id="ng" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#6C63FF"/><stop offset="100%" stop-color="#00D4FF"/></linearGradient></defs></svg>
-      <span>Bunder<strong>Math</strong></span>
+  <!-- ============ NAVBAR ============ -->
+  <nav id="navbar">
+    <div class="nav-container">
+      <a href="#beranda" class="nav-logo">Nauval</a>
+      <div class="nav-links" id="navLinks">
+        <a href="#beranda" class="nav-link active">Beranda</a>
+        <a href="#tentang" class="nav-link">Tentang</a>
+        <a href="#keahlian" class="nav-link">Keahlian</a>
+        <a href="#portfolio" class="nav-link">Portfolio</a>
+        <a href="#cv" class="nav-link">CV</a>
+      </div>
+      <button class="nav-hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
     </div>
-    <button class="nav-toggle" id="navToggle" aria-label="Menu">
-      <span></span><span></span><span></span>
-    </button>
-    <ul class="nav-menu" id="navMenu">
-      <li><a href="#beranda" class="nav-link">Beranda</a></li>
-      <li><a href="#tentang" class="nav-link">Tentang</a></li>
-      <li><a href="#materi" class="nav-link">Materi</a></li>
-      <li><a href="#visualisasi" class="nav-link">Visualisasi</a></li>
-      <li><a href="#rumus" class="nav-link">Rumus</a></li>
-      <li><a href="#soal" class="nav-link">Contoh Soal</a></li>
-      <li><a href="#kuis" class="nav-link">Kuis</a></li>
-      <li><a href="#dashboard" class="nav-link">Dashboard</a></li>
-    </ul>
-  </div>
-</nav>
+  </nav>
 
-<!-- HERO SECTION -->
-<section id="beranda" class="hero">
-  <div class="hero-bg">
-    <div class="hero-orb orb1"></div>
-    <div class="hero-orb orb2"></div>
-    <div class="hero-orb orb3"></div>
-    <canvas id="heroCanvas"></canvas>
-  </div>
-  <div class="hero-content">
-    <div class="hero-badge reveal">✦ Media Pembelajaran Interaktif</div>
-    <h1 class="hero-title reveal">
-      Media Pembelajaran<br/>
-      <span class="gradient-text typed-text" id="typedText"></span>
-    </h1>
-    <p class="hero-tagline reveal">Jelajahi dunia lingkaran dengan cara yang menyenangkan, interaktif, dan mudah dipahami. Dari konsep dasar hingga persamaan lingkaran.</p>
-    <div class="hero-buttons reveal">
-      <a href="#materi" class="btn btn-primary ripple">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
-        Mulai Belajar
-      </a>
-      <a href="#kuis" class="btn btn-secondary ripple">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
-        Kerjakan Kuis
-      </a>
-    </div>
-    <div class="hero-stats reveal">
-      <div class="stat-item">
-        <span class="stat-num" data-target="15">0</span>
-        <span class="stat-label">Topik Materi</span>
-      </div>
-      <div class="stat-divider"></div>
-      <div class="stat-item">
-        <span class="stat-num" data-target="10">0</span>
-        <span class="stat-label">Soal Kuis</span>
-      </div>
-      <div class="stat-divider"></div>
-      <div class="stat-item">
-        <span class="stat-num" data-target="5">0</span>
-        <span class="stat-label">Contoh Soal</span>
-      </div>
+  <!-- Mobile Sidebar -->
+  <div class="nav-overlay" id="navOverlay"></div>
+  <div class="nav-sidebar" id="navSidebar">
+    <a href="#beranda" class="sidebar-link active">Beranda</a>
+    <a href="#tentang" class="sidebar-link">Tentang</a>
+    <a href="#keahlian" class="sidebar-link">Keahlian</a>
+    <a href="#portfolio" class="sidebar-link">Portfolio</a>
+    <a href="#cv" class="sidebar-link">CV</a>
+    <div class="sidebar-footer">
+      <p>&copy; 2025 Nauval Ikram Wicaksono</p>
     </div>
   </div>
-  <div class="hero-visual reveal">
-    <div class="circle-illustration">
-      <svg viewBox="0 0 400 400" class="hero-svg">
-        <defs>
-          <linearGradient id="hg1" x1="0%" y1="0%" x2="100%" y2="100%">
-            <stop offset="0%" stop-color="#6C63FF" stop-opacity="0.8"/>
-            <stop offset="100%" stop-color="#00D4FF" stop-opacity="0.8"/>
-          </linearGradient>
-          <filter id="glow"><feGaussianBlur stdDeviation="4" result="coloredBlur"/><feMerge><feMergeNode in="coloredBlur"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
-        </defs>
-        <circle cx="200" cy="200" r="150" fill="none" stroke="url(#hg1)" stroke-width="2" opacity="0.3" class="hero-ring r1"/>
-        <circle cx="200" cy="200" r="110" fill="none" stroke="url(#hg1)" stroke-width="1.5" opacity="0.5" class="hero-ring r2"/>
-        <circle cx="200" cy="200" r="70" fill="url(#hg1)" opacity="0.15" class="hero-ring r3"/>
-        <circle cx="200" cy="200" r="70" fill="none" stroke="url(#hg1)" stroke-width="2" filter="url(#glow)"/>
-        <!-- Radius line -->
-        <line x1="200" y1="200" x2="270" y2="200" stroke="#6C63FF" stroke-width="2" stroke-dasharray="4,3"/>
-        <text x="232" y="193" fill="#6C63FF" font-size="12" font-family="Inter">r</text>
-        <!-- Diameter line -->
-        <line x1="130" y1="200" x2="270" y2="200" stroke="#00D4FF" stroke-width="1.5" stroke-dasharray="4,3" opacity="0.6"/>
-        <!-- Center dot -->
-        <circle cx="200" cy="200" r="4" fill="#6C63FF" filter="url(#glow)"/>
-        <!-- Arc label -->
-        <text x="200" y="120" fill="#fff" font-size="11" font-family="Inter" text-anchor="middle" opacity="0.7">Busur</text>
-        <!-- Points on circle -->
-        <circle cx="270" cy="200" r="5" fill="#00D4FF" filter="url(#glow)"/>
-        <circle cx="130" cy="200" r="5" fill="#00D4FF" filter="url(#glow)"/>
-        <circle cx="200" cy="130" r="5" fill="#FF6B9D" filter="url(#glow)"/>
-        <!-- Floating labels -->
-        <text x="280" y="204" fill="#00D4FF" font-size="11" font-family="Inter">A</text>
-        <text x="115" y="204" fill="#00D4FF" font-size="11" font-family="Inter">B</text>
-        <text x="204" y="122" fill="#FF6B9D" font-size="11" font-family="Inter">C</text>
-        <!-- Pi symbol -->
-        <text x="200" y="210" fill="rgba(255,255,255,0.5)" font-size="28" font-family="Space Grotesk" text-anchor="middle" font-weight="700">π</text>
-      </svg>
-      <div class="float-badge fb1">K = 2πr</div>
-      <div class="float-badge fb2">L = πr²</div>
-      <div class="float-badge fb3">d = 2r</div>
-    </div>
-  </div>
-  <div class="scroll-indicator">
-    <div class="scroll-dot"></div>
-    <span>Scroll untuk belajar</span>
-  </div>
-</section>
 
-<!-- TENTANG MATERI -->
-<section id="tentang" class="section tentang">
-  <div class="container">
-    <div class="section-header reveal">
-      <span class="section-badge">Pengenalan</span>
-      <h2>Tentang Materi <span class="gradient-text">Lingkaran</span></h2>
-      <p>Memahami konsep dasar dan pentingnya mempelajari lingkaran dalam matematika</p>
-    </div>
-    <div class="tentang-grid">
-      <div class="tentang-card reveal" data-delay="0">
-        <div class="card-icon">
-          <svg viewBox="0 0 48 48" fill="none"><circle cx="24" cy="24" r="18" stroke="url(#ti1)" stroke-width="2.5"/><circle cx="24" cy="24" r="6" fill="url(#ti1)"/><defs><linearGradient id="ti1" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#6C63FF"/><stop offset="1" stop-color="#00D4FF"/></linearGradient></defs></svg>
-        </div>
-        <h3>Pengertian Lingkaran</h3>
-        <p>Lingkaran adalah himpunan semua titik pada bidang datar yang berjarak sama (disebut jari-jari) dari suatu titik tetap yang disebut pusat lingkaran.</p>
-      </div>
-      <div class="tentang-card reveal" data-delay="100">
-        <div class="card-icon">
-          <svg viewBox="0 0 48 48" fill="none"><path d="M8 40L24 8l16 32H8z" stroke="url(#ti2)" stroke-width="2.5" stroke-linejoin="round"/><defs><linearGradient id="ti2" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#FF6B9D"/><stop offset="1" stop-color="#FFB347"/></linearGradient></defs></svg>
-        </div>
-        <h3>Fungsi Mempelajari</h3>
-        <p>Lingkaran menjadi dasar dalam geometri, trigonometri, kalkulus, dan fisika. Pemahaman lingkaran membuka pintu ke konsep matematika yang lebih tinggi.</p>
-      </div>
-      <div class="tentang-card reveal" data-delay="200">
-        <div class="card-icon">
-          <svg viewBox="0 0 48 48" fill="none"><rect x="8" y="8" width="32" height="32" rx="8" stroke="url(#ti3)" stroke-width="2.5"/><path d="M16 24h16M24 16v16" stroke="url(#ti3)" stroke-width="2.5" stroke-linecap="round"/><defs><linearGradient id="ti3" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#00D4FF"/><stop offset="1" stop-color="#6C63FF"/></linearGradient></defs></svg>
-        </div>
-        <h3>Penerapan Sehari-hari</h3>
-        <p>Roda kendaraan, jam dinding, pizza, koin, terowongan, antena parabola — lingkaran ada di mana-mana dalam kehidupan kita sehari-hari.</p>
-      </div>
-      <div class="tentang-card reveal" data-delay="300">
-        <div class="card-icon">
-          <svg viewBox="0 0 48 48" fill="none"><path d="M24 6l4 12h12l-10 7 4 12-10-7-10 7 4-12L8 18h12z" stroke="url(#ti4)" stroke-width="2.5" stroke-linejoin="round"/><defs><linearGradient id="ti4" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#FFB347"/><stop offset="1" stop-color="#FF6B9D"/></linearGradient></defs></svg>
-        </div>
-        <h3>Tujuan Pembelajaran</h3>
-        <p>Siswa mampu mengenal unsur-unsur lingkaran, menghitung keliling dan luas, memahami hubungan sudut, serta menyelesaikan soal persamaan lingkaran.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- MATERI PEMBELAJARAN -->
-<section id="materi" class="section materi-section">
-  <div class="container">
-    <div class="section-header reveal">
-      <span class="section-badge">Belajar</span>
-      <h2>Materi <span class="gradient-text">Pembelajaran</span></h2>
-      <p>Pelajari semua konsep lingkaran secara lengkap dan terstruktur</p>
-    </div>
-    <div class="materi-tabs reveal">
-      <button class="tab-btn active" data-tab="unsur">Unsur-Unsur</button>
-      <button class="tab-btn" data-tab="sudut">Sudut</button>
-      <button class="tab-btn" data-tab="ukuran">Keliling & Luas</button>
-      <button class="tab-btn" data-tab="persamaan">Persamaan</button>
+  <!-- ============ HERO / BERANDA ============ -->
+  <section id="beranda" class="hero">
+    <div class="hero-bg">
+      <div class="orb orb-1"></div>
+      <div class="orb orb-2"></div>
+      <div class="orb orb-3"></div>
+      <div class="hero-grid"></div>
     </div>
 
-    <!-- Tab: Unsur-Unsur -->
-    <div class="tab-content active" id="tab-unsur">
-      <div class="materi-grid">
-        <div class="materi-visual reveal">
-          <svg viewBox="0 0 320 320" class="materi-svg" id="unsurSvg">
-            <defs>
-              <linearGradient id="mg1" x1="0%" y1="0%" x2="100%" y2="100%">
-                <stop offset="0%" stop-color="#6C63FF"/>
-                <stop offset="100%" stop-color="#00D4FF"/>
-              </linearGradient>
-              <filter id="mglow"><feGaussianBlur stdDeviation="3" result="cb"/><feMerge><feMergeNode in="cb"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
-            </defs>
-            <!-- Main circle -->
-            <circle cx="160" cy="160" r="110" fill="rgba(108,99,255,0.05)" stroke="url(#mg1)" stroke-width="2.5" filter="url(#mglow)"/>
-            <!-- Diameter -->
-            <line x1="50" y1="160" x2="270" y2="160" stroke="#00D4FF" stroke-width="1.5" stroke-dasharray="5,3" opacity="0.7"/>
-            <!-- Radius -->
-            <line x1="160" y1="160" x2="238" y2="93" stroke="#6C63FF" stroke-width="2" stroke-dasharray="4,3"/>
-            <!-- Tali busur -->
-            <line x1="80" y1="100" x2="240" y2="100" stroke="#FF6B9D" stroke-width="1.5" stroke-dasharray="4,3" opacity="0.8"/>
-            <!-- Apotema -->
-            <line x1="160" y1="160" x2="160" y2="100" stroke="#FFB347" stroke-width="1.5" stroke-dasharray="4,3" opacity="0.8"/>
-            <!-- Juring (sector) -->
-            <path d="M160,160 L160,50 A110,110 0 0,1 270,160 Z" fill="rgba(108,99,255,0.12)" stroke="url(#mg1)" stroke-width="1"/>
-            <!-- Tembereng -->
-            <path d="M80,100 A110,110 0 0,1 240,100 Z" fill="rgba(255,107,157,0.12)" stroke="#FF6B9D" stroke-width="1"/>
-            <!-- Center -->
-            <circle cx="160" cy="160" r="5" fill="#6C63FF" filter="url(#mglow)"/>
-            <!-- Labels -->
-            <text x="165" y="155" fill="#6C63FF" font-size="11" font-family="Inter" font-weight="600">O</text>
-            <text x="195" y="118" fill="#6C63FF" font-size="10" font-family="Inter">r (jari-jari)</text>
-            <text x="145" y="250" fill="#00D4FF" font-size="10" font-family="Inter">d (diameter)</text>
-            <text x="130" y="95" fill="#FF6B9D" font-size="10" font-family="Inter">tali busur</text>
-            <text x="163" y="135" fill="#FFB347" font-size="10" font-family="Inter">ap</text>
-            <text x="195" y="100" fill="rgba(108,99,255,0.8)" font-size="10" font-family="Inter">juring</text>
-            <text x="130" y="75" fill="#FF6B9D" font-size="10" font-family="Inter">tembereng</text>
-            <!-- Busur arc label -->
-            <text x="60" y="80" fill="#00D4FF" font-size="10" font-family="Inter">busur</text>
-          </svg>
+    <div class="hero-content">
+      <div class="hero-inner">
+        <!-- Foto Profil -->
+        <div class="hero-photo reveal">
+          <div class="photo-glow"></div>
+          <div class="photo-border"></div>
+          <img src="assets/ChatGPT Image 6 Mei 2026, 10.00.20.png" alt="Nauval Ikram Wicaksono">
         </div>
-        <div class="materi-accordion reveal">
-          <div class="acc-item">
-            <button class="acc-header">
-              <span class="acc-icon">⊙</span> Jari-Jari (r)
-              <svg class="acc-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
-            </button>
-            <div class="acc-body">
-              <p>Jari-jari adalah jarak dari titik pusat lingkaran ke setiap titik pada lingkaran. Dilambangkan dengan <strong>r</strong>.</p>
-              <div class="formula-mini">r = ½d</div>
-            </div>
+
+        <!-- Teks -->
+        <div class="hero-text">
+          <p class="hero-greeting reveal" data-delay="0.3">Halo, saya</p>
+          <h1 class="hero-name reveal" data-delay="0.5">
+            <span class="gradient-text">Nauval Ikram</span>
+            <br>Wicaksono
+          </h1>
+          <p class="hero-tagline reveal" data-delay="0.7">Aspiring Web Developer &bull; Exploring Digital Technology</p>
+          <p class="hero-desc reveal" data-delay="0.9">
+            Saya adalah siswa SMK yang memiliki minat di bidang pengembangan web
+            dan teknologi digital. Saat ini saya fokus mempelajari pembuatan website
+            yang tidak hanya menarik secara tampilan, tetapi juga memiliki fungsi nyata,
+            mudah digunakan, dan bermanfaat bagi pengguna.
+          </p>
+          <div class="hero-buttons reveal" data-delay="1.1">
+            <a href="#portfolio" class="btn btn-primary">
+              Lihat Portfolio
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+            </a>
+            <a href="#kontak" class="btn btn-secondary">
+              Hubungi Saya
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" x2="21" y1="14" y2="3"/></svg>
+            </a>
           </div>
-          <div class="acc-item">
-            <button class="acc-header">
-              <span class="acc-icon">↔</span> Diameter (d)
-              <svg class="acc-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
-            </button>
-            <div class="acc-body">
-              <p>Diameter adalah tali busur yang melalui titik pusat lingkaran. Panjangnya dua kali jari-jari. Dilambangkan dengan <strong>d</strong>.</p>
-              <div class="formula-mini">d = 2r</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Scroll Indicator -->
+    <div class="scroll-indicator reveal" data-delay="1.5">
+      <span>Scroll</span>
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+    </div>
+  </section>
+
+  <!-- ============ TENTANG SAYA ============ -->
+  <section id="tentang" class="section">
+    <div class="section-container">
+      <!-- Section Title -->
+      <div class="section-header reveal">
+        <p class="section-subtitle">Perjalanan Saya</p>
+        <h2 class="section-title">Tentang Saya</h2>
+        <div class="section-line"></div>
+      </div>
+
+      <!-- Cerita & Pendidikan -->
+      <div class="about-grid">
+        <!-- Cerita -->
+        <div class="glass-card reveal reveal-left">
+          <div class="card-header">
+            <div class="card-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg>
             </div>
+            <h3>Riwayat Keluarga</h3>
           </div>
-          <div class="acc-item">
-            <button class="acc-header">
-              <span class="acc-icon">⌒</span> Busur
-              <svg class="acc-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
-            </button>
-            <div class="acc-body">
-              <p>Busur adalah bagian dari keliling lingkaran. Busur kecil adalah busur yang lebih pendek, busur besar adalah busur yang lebih panjang.</p>
+          <div class="card-body">
+            <p>Saya merupakan anak pertama dari keluarga sederhana yang selalu mendukung saya untuk terus belajar dan berkembang. Dari lingkungan keluarga, saya terbiasa untuk mandiri, bertanggung jawab, dan berusaha memberikan yang terbaik dalam setiap hal yang saya lakukan.</p>
+          </div>
+        </div>
+
+        <!-- Pendidikan -->
+        <div class="glass-card reveal reveal-right">
+          <div class="card-header">
+            <div class="card-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
             </div>
+            <h3>Riwayat Pendidikan</h3>
           </div>
-          <div class="acc-item">
-            <button class="acc-header">
-              <span class="acc-icon">—</span> Tali Busur
-              <svg class="acc-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
-            </button>
-            <div class="acc-body">
-              <p>Tali busur adalah ruas garis yang menghubungkan dua titik pada lingkaran. Diameter adalah tali busur terpanjang.</p>
-            </div>
-          </div>
-          <div class="acc-item">
-            <button class="acc-header">
-              <span class="acc-icon">⊥</span> Apotema
-              <svg class="acc-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
-            </button>
-            <div class="acc-body">
-              <p>Apotema adalah jarak terpendek dari pusat lingkaran ke tali busur (tegak lurus terhadap tali busur).</p>
-            </div>
-          </div>
-          <div class="acc-item">
-            <button class="acc-header">
-              <span class="acc-icon">◔</span> Juring
-              <svg class="acc-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
-            </button>
-            <div class="acc-body">
-              <p>Juring adalah daerah yang dibatasi oleh dua jari-jari dan sebuah busur. Seperti potongan pizza.</p>
-            </div>
-          </div>
-          <div class="acc-item">
-            <button class="acc-header">
-              <span class="acc-icon">◗</span> Tembereng
-              <svg class="acc-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
-            </button>
-            <div class="acc-body">
-              <p>Tembereng adalah daerah yang dibatasi oleh tali busur dan busur lingkaran. Tembereng = Juring − Segitiga.</p>
+          <div class="card-body">
+            <div class="timeline">
+              <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                  <span class="timeline-year">2015 - 2021</span>
+                  <h4>SD Negeri Genuk 02, Ungaran Barat</h4>
+                  <p class="timeline-location">Kab. Semarang</p>
+                </div>
+              </div>
+              <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                  <span class="timeline-year">2021 - 2024</span>
+                  <h4>SMP Negeri 1 Ungaran</h4>
+                  <p class="timeline-location">Kab. Semarang</p>
+                </div>
+              </div>
+              <div class="timeline-item active">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                  <span class="timeline-year">2024 - Sekarang</span>
+                  <h4>SMK Negeri 7 Semarang &mdash; Sistem Informasi Jaringan Aplikasi</h4>
+                  <p class="timeline-location">Kota Semarang</p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
 
-    <!-- Tab: Sudut -->
-    <div class="tab-content" id="tab-sudut">
-      <div class="materi-grid">
-        <div class="materi-visual reveal">
-          <svg viewBox="0 0 320 320" class="materi-svg">
-            <defs>
-              <linearGradient id="sg1" x1="0%" y1="0%" x2="100%" y2="100%">
-                <stop offset="0%" stop-color="#FF6B9D"/>
-                <stop offset="100%" stop-color="#FFB347"/>
-              </linearGradient>
-            </defs>
-            <circle cx="160" cy="160" r="110" fill="rgba(255,107,157,0.05)" stroke="url(#sg1)" stroke-width="2"/>
-            <!-- Sudut pusat -->
-            <line x1="160" y1="160" x2="80" y2="80" stroke="#FF6B9D" stroke-width="2"/>
-            <line x1="160" y1="160" x2="240" y2="80" stroke="#FF6B9D" stroke-width="2"/>
-            <path d="M130,130 A42,42 0 0,1 190,130" fill="rgba(255,107,157,0.2)" stroke="#FF6B9D" stroke-width="1.5"/>
-            <text x="148" y="148" fill="#FF6B9D" font-size="11" font-family="Inter" font-weight="600">α</text>
-            <!-- Sudut keliling -->
-            <line x1="160" y1="270" x2="80" y2="80" stroke="#6C63FF" stroke-width="1.5" stroke-dasharray="4,3"/>
-            <line x1="160" y1="270" x2="240" y2="80" stroke="#6C63FF" stroke-width="1.5" stroke-dasharray="4,3"/>
-            <path d="M145,248 A20,20 0 0,1 175,248" fill="rgba(108,99,255,0.2)" stroke="#6C63FF" stroke-width="1.5"/>
-            <text x="152" y="265" fill="#6C63FF" font-size="11" font-family="Inter" font-weight="600">β</text>
-            <!-- Points -->
-            <circle cx="80" cy="80" r="5" fill="#FF6B9D"/>
-            <circle cx="240" cy="80" r="5" fill="#FF6B9D"/>
-            <circle cx="160" cy="270" r="5" fill="#6C63FF"/>
-            <circle cx="160" cy="160" r="5" fill="#FF6B9D"/>
-            <!-- Labels -->
-            <text x="68" y="72" fill="#fff" font-size="11" font-family="Inter">A</text>
-            <text x="244" y="72" fill="#fff" font-size="11" font-family="Inter">B</text>
-            <text x="164" y="285" fill="#6C63FF" font-size="11" font-family="Inter">C</text>
-            <text x="164" y="155" fill="#FF6B9D" font-size="11" font-family="Inter">O</text>
-            <!-- Relation text -->
-            <text x="160" y="30" fill="rgba(255,255,255,0.6)" font-size="10" font-family="Inter" text-anchor="middle">α = 2β</text>
-          </svg>
-        </div>
-        <div class="materi-accordion reveal">
-          <div class="acc-item open">
-            <button class="acc-header">
-              <span class="acc-icon">∠</span> Sudut Pusat
-              <svg class="acc-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
-            </button>
-            <div class="acc-body" style="display:block">
-              <p>Sudut pusat adalah sudut yang dibentuk oleh dua jari-jari lingkaran. Titik sudutnya berada di pusat lingkaran (O).</p>
-              <div class="formula-mini">∠AOB = sudut pusat</div>
+      <!-- Hobi -->
+      <div class="hobbies-section reveal">
+        <h3 class="subsection-title">Hobi Saya</h3>
+        <div class="hobby-showcase">
+
+          <div class="hobby-showcase-item" data-hobby="coding">
+            <div class="hobby-showcase-bg">
+              <svg width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="rgba(16,185,129,0.15)" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+            </div>
+            <div class="hobby-showcase-icon">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+            </div>
+            <div class="hobby-showcase-content">
+              <h4>Coding</h4>
+              <p>Menulis kode dan membangun website dari nol. Menikmati proses problem-solving dan melihat hasil kerja nyata di browser.</p>
             </div>
           </div>
-          <div class="acc-item">
-            <button class="acc-header">
-              <span class="acc-icon">∠</span> Sudut Keliling
-              <svg class="acc-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
-            </button>
-            <div class="acc-body">
-              <p>Sudut keliling adalah sudut yang titik sudutnya berada pada lingkaran dan kedua kakinya adalah tali busur.</p>
-              <div class="formula-mini">∠ACB = sudut keliling</div>
+
+          <div class="hobby-showcase-item" data-hobby="canva">
+            <div class="hobby-showcase-bg">
+              <svg width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="rgba(20,184,166,0.15)" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><circle cx="13.5" cy="6.5" r=".5"/><circle cx="17.5" cy="10.5" r=".5"/><circle cx="8.5" cy="7.5" r=".5"/><circle cx="6.5" cy="12.5" r=".5"/><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10c.926 0 1.648-.746 1.648-1.688 0-.437-.18-.835-.437-1.125-.29-.289-.438-.652-.438-1.125a1.64 1.64 0 0 1 1.668-1.668h1.996c3.051 0 5.555-2.503 5.555-5.554C21.965 6.012 17.461 2 12 2z"/></svg>
+            </div>
+            <div class="hobby-showcase-icon">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="13.5" cy="6.5" r=".5"/><circle cx="17.5" cy="10.5" r=".5"/><circle cx="8.5" cy="7.5" r=".5"/><circle cx="6.5" cy="12.5" r=".5"/><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10c.926 0 1.648-.746 1.648-1.688 0-.437-.18-.835-.437-1.125-.29-.289-.438-.652-.438-1.125a1.64 1.64 0 0 1 1.668-1.668h1.996c3.051 0 5.555-2.503 5.555-5.554C21.965 6.012 17.461 2 12 2z"/></svg>
+            </div>
+            <div class="hobby-showcase-content">
+              <h4>Desain Canva</h4>
+              <p>Membuat poster dan konten visual. Suka bereksperimen dengan warna, tipografi, dan komposisi desain.</p>
             </div>
           </div>
-          <div class="acc-item">
-            <button class="acc-header">
-              <span class="acc-icon">⚖</span> Hubungan Sudut Pusat & Keliling
-              <svg class="acc-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
-            </button>
-            <div class="acc-body">
-              <p>Sudut pusat sama dengan dua kali sudut keliling yang menghadap busur yang sama.</p>
-              <div class="formula-mini">∠Pusat = 2 × ∠Keliling</div>
-              <p style="margin-top:8px;font-size:0.85rem;opacity:0.8">Jika sudut keliling = 30°, maka sudut pusat = 60°</p>
+
+          <div class="hobby-showcase-item" data-hobby="ml">
+            <div class="hobby-showcase-bg">
+              <svg width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="rgba(245,158,11,0.15)" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><line x1="6" x2="10" y1="11" y2="11"/><line x1="8" x2="8" y1="9" y2="13"/><line x1="15" x2="15.01" y1="12" y2="12"/><line x1="18" x2="18.01" y1="10" y2="10"/><path d="M17.32 5H6.68a4 4 0 0 0-3.978 3.59c-.006.052-.01.101-.017.152C2.604 9.416 2 14.456 2 16a3 3 0 0 0 3 3c1 0 1.5-.5 2-1l1.414-1.414A2 2 0 0 1 9.828 16h4.344a2 2 0 0 1 1.414.586L17 18c.5.5 1 1 2 1a3 3 0 0 0 3-3c0-1.545-.604-6.584-.685-7.258-.007-.05-.011-.1-.017-.151A4 4 0 0 0 17.32 5z"/></svg>
+            </div>
+            <div class="hobby-showcase-icon">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="6" x2="10" y1="11" y2="11"/><line x1="8" x2="8" y1="9" y2="13"/><line x1="15" x2="15.01" y1="12" y2="12"/><line x1="18" x2="18.01" y1="10" y2="10"/><path d="M17.32 5H6.68a4 4 0 0 0-3.978 3.59c-.006.052-.01.101-.017.152C2.604 9.416 2 14.456 2 16a3 3 0 0 0 3 3c1 0 1.5-.5 2-1l1.414-1.414A2 2 0 0 1 9.828 16h4.344a2 2 0 0 1 1.414.586L17 18c.5.5 1 1 2 1a3 3 0 0 0 3-3c0-1.545-.604-6.584-.685-7.258-.007-.05-.011-.1-.017-.151A4 4 0 0 0 17.32 5z"/></svg>
+            </div>
+            <div class="hobby-showcase-content">
+              <h4>Mobile Legends</h4>
+              <p>Bermain sebagai hiburan dan cara bersantai. Menikmati strategi tim dan koordinasi antar pemain.</p>
             </div>
           </div>
+
+          <div class="hobby-showcase-item" data-hobby="hiking">
+            <div class="hobby-showcase-bg">
+              <svg width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="rgba(52,211,153,0.15)" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><path d="m8 3 4 8 5-5 5 15H2L8 3z"/></svg>
+            </div>
+            <div class="hobby-showcase-icon">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m8 3 4 8 5-5 5 15H2L8 3z"/></svg>
+            </div>
+            <div class="hobby-showcase-content">
+              <h4>Hiking</h4>
+              <p>Mendaki gunung dan menjelajahi alam terbuka. Mengajarkan ketekunan, keberanian, dan menghargai alam.</p>
+            </div>
+          </div>
+
+          <div class="hobby-showcase-item" data-hobby="bola">
+            <div class="hobby-showcase-bg">
+              <svg width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="rgba(59,130,246,0.15)" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/><path d="M2 12h20"/></svg>
+            </div>
+            <div class="hobby-showcase-icon">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/><path d="M2 12h20"/></svg>
+            </div>
+            <div class="hobby-showcase-content">
+              <h4>Menonton Bola</h4>
+              <p>Menikmati pertandingan sepak bola, mengikuti perkembangan liga dan tim favorit dengan penuh semangat.</p>
+            </div>
+          </div>
+
+
         </div>
       </div>
-    </div>
 
-    <!-- Tab: Keliling & Luas -->
-    <div class="tab-content" id="tab-ukuran">
-      <div class="materi-grid">
-        <div class="materi-visual reveal">
-          <svg viewBox="0 0 320 320" class="materi-svg">
-            <defs>
-              <linearGradient id="ug1" x1="0%" y1="0%" x2="100%" y2="100%">
-                <stop offset="0%" stop-color="#00D4FF"/>
-                <stop offset="100%" stop-color="#6C63FF"/>
-              </linearGradient>
-            </defs>
-            <circle cx="160" cy="160" r="100" fill="rgba(0,212,255,0.08)" stroke="url(#ug1)" stroke-width="3"/>
-            <!-- Keliling highlight -->
-            <circle cx="160" cy="160" r="100" fill="none" stroke="#00D4FF" stroke-width="6" stroke-dasharray="628" stroke-dashoffset="0" opacity="0.4" class="keliling-anim"/>
-            <!-- Radius -->
-            <line x1="160" y1="160" x2="260" y2="160" stroke="#6C63FF" stroke-width="2.5"/>
-            <circle cx="160" cy="160" r="5" fill="#6C63FF"/>
-            <circle cx="260" cy="160" r="5" fill="#6C63FF"/>
-            <text x="200" y="152" fill="#6C63FF" font-size="13" font-family="Space Grotesk" font-weight="600">r</text>
-            <!-- Area fill -->
-            <circle cx="160" cy="160" r="100" fill="url(#ug1)" opacity="0.07"/>
-            <!-- Labels -->
-            <text x="160" y="168" fill="rgba(255,255,255,0.4)" font-size="32" font-family="Space Grotesk" text-anchor="middle" font-weight="700">π</text>
-            <text x="160" y="300" fill="#00D4FF" font-size="11" font-family="Inter" text-anchor="middle">K = 2πr</text>
-            <text x="160" y="315" fill="#6C63FF" font-size="11" font-family="Inter" text-anchor="middle">L = πr²</text>
-          </svg>
-        </div>
-        <div class="materi-accordion reveal">
-          <div class="acc-item open">
-            <button class="acc-header">
-              <span class="acc-icon">○</span> Keliling Lingkaran
-              <svg class="acc-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
-            </button>
-            <div class="acc-body" style="display:block">
-              <p>Keliling lingkaran adalah panjang lintasan yang mengelilingi lingkaran satu putaran penuh.</p>
-              <div class="formula-mini">K = 2πr = πd</div>
-              <p style="margin-top:8px;font-size:0.85rem;opacity:0.8">π ≈ 3,14 atau 22/7</p>
+      <!-- Minat & Keahlian Ringkas -->
+      <!-- Minat, Kelebihan, Cita-cita — layout baru -->
+      <div class="about-trio reveal">
+
+        <!-- Card 1: Minat — dengan highlight besar -->
+        <div class="trio-card trio-card--minat glass-card">
+          <div class="trio-card-glow"></div>
+          <p class="trio-label">Minat & Ketertarikan</p>
+          <div class="trio-minat-list">
+            <div class="trio-minat-item">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="18" x="3" y="3" rx="2"/><path d="M3 9h18"/><path d="M9 21V9"/></svg>
+              Web Development
             </div>
-          </div>
-          <div class="acc-item">
-            <button class="acc-header">
-              <span class="acc-icon">●</span> Luas Lingkaran
-              <svg class="acc-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
-            </button>
-            <div class="acc-body">
-              <p>Luas lingkaran adalah luas daerah yang dibatasi oleh lingkaran.</p>
-              <div class="formula-mini">L = πr²</div>
-              <p style="margin-top:8px;font-size:0.85rem;opacity:0.8">Satuan luas: cm², m², dll.</p>
+            <div class="trio-minat-item">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.376 3.622a1 1 0 0 1 3.002 3.002L7.368 18.635a2 2 0 0 1-.855.506l-2.872.838a.5.5 0 0 1-.62-.62l.838-2.872a2 2 0 0 1 .506-.855z"/></svg>
+              UI/UX Design
             </div>
-          </div>
-          <div class="acc-item">
-            <button class="acc-header">
-              <span class="acc-icon">◔</span> Panjang Busur & Luas Juring
-              <svg class="acc-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
-            </button>
-            <div class="acc-body">
-              <div class="formula-mini">Busur = (α/360°) × 2πr</div>
-              <div class="formula-mini" style="margin-top:8px">Juring = (α/360°) × πr²</div>
-              <p style="margin-top:8px;font-size:0.85rem;opacity:0.8">α = sudut pusat dalam derajat</p>
+            <div class="trio-minat-item">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.55a11 11 0 0 1 14.08 0"/><path d="M1.42 9a16 16 0 0 1 21.16 0"/><path d="M8.53 16.11a6 6 0 0 1 6.95 0"/><line x1="12" x2="12.01" y1="20" y2="20"/></svg>
+              Jaringan Komputer
+            </div>
+            <div class="trio-minat-item">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="14" x="2" y="3" rx="2"/><line x1="8" x2="16" y1="21" y2="21"/><line x1="12" x2="12" y1="17" y2="21"/></svg>
+              Teknologi Digital
             </div>
           </div>
         </div>
-      </div>
-    </div>
 
-    <!-- Tab: Persamaan -->
-    <div class="tab-content" id="tab-persamaan">
-      <div class="materi-grid">
-        <div class="materi-visual reveal">
-          <svg viewBox="0 0 320 320" class="materi-svg">
-            <defs>
-              <linearGradient id="pg1" x1="0%" y1="0%" x2="100%" y2="100%">
-                <stop offset="0%" stop-color="#FFB347"/>
-                <stop offset="100%" stop-color="#FF6B9D"/>
-              </linearGradient>
-            </defs>
-            <!-- Grid -->
-            <line x1="20" y1="160" x2="300" y2="160" stroke="rgba(255,255,255,0.15)" stroke-width="1"/>
-            <line x1="160" y1="20" x2="160" y2="300" stroke="rgba(255,255,255,0.15)" stroke-width="1"/>
-            <!-- Grid lines -->
-            <line x1="20" y1="110" x2="300" y2="110" stroke="rgba(255,255,255,0.05)" stroke-width="1"/>
-            <line x1="20" y1="210" x2="300" y2="210" stroke="rgba(255,255,255,0.05)" stroke-width="1"/>
-            <line x1="110" y1="20" x2="110" y2="300" stroke="rgba(255,255,255,0.05)" stroke-width="1"/>
-            <line x1="210" y1="20" x2="210" y2="300" stroke="rgba(255,255,255,0.05)" stroke-width="1"/>
-            <!-- Circle centered at origin -->
-            <circle cx="160" cy="160" r="80" fill="rgba(255,179,71,0.08)" stroke="url(#pg1)" stroke-width="2.5"/>
-            <!-- Center point -->
-            <circle cx="160" cy="160" r="5" fill="#FFB347"/>
-            <!-- Radius to point -->
-            <line x1="160" y1="160" x2="217" y2="103" stroke="#FFB347" stroke-width="1.5" stroke-dasharray="4,3"/>
-            <circle cx="217" cy="103" r="4" fill="#FF6B9D"/>
-            <!-- Labels -->
-            <text x="165" y="155" fill="#FFB347" font-size="11" font-family="Inter">(a,b)</text>
-            <text x="220" y="100" fill="#FF6B9D" font-size="11" font-family="Inter">(x,y)</text>
-            <text x="183" y="128" fill="#FFB347" font-size="10" font-family="Inter">r</text>
-            <!-- Axis labels -->
-            <text x="295" y="155" fill="rgba(255,255,255,0.4)" font-size="11" font-family="Inter">x</text>
-            <text x="165" y="18" fill="rgba(255,255,255,0.4)" font-size="11" font-family="Inter">y</text>
-            <!-- Formula -->
-            <text x="160" y="295" fill="#FFB347" font-size="10" font-family="Inter" text-anchor="middle">(x-a)²+(y-b)²=r²</text>
-          </svg>
-        </div>
-        <div class="materi-accordion reveal">
-          <div class="acc-item open">
-            <button class="acc-header">
-              <span class="acc-icon">⊕</span> Persamaan Lingkaran (Pusat O)
-              <svg class="acc-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
-            </button>
-            <div class="acc-body" style="display:block">
-              <p>Persamaan lingkaran dengan pusat di titik asal O(0,0) dan jari-jari r:</p>
-              <div class="formula-mini">x² + y² = r²</div>
+        <!-- Card 2: Kelebihan — skill bars -->
+        <div class="trio-card trio-card--skill glass-card">
+          <div class="trio-card-glow trio-card-glow--teal"></div>
+          <p class="trio-label">Kelebihan Diri</p>
+          <div class="trio-skill-bars">
+            <div class="trio-bar-item">
+              <div class="trio-bar-top"><span>HTML & CSS</span><span>70%</span></div>
+              <div class="trio-bar-track"><div class="trio-bar-fill" style="width:70%"></div></div>
+            </div>
+            <div class="trio-bar-item">
+              <div class="trio-bar-top"><span>Canva</span><span>75%</span></div>
+              <div class="trio-bar-track"><div class="trio-bar-fill" style="width:75%"></div></div>
+            </div>
+            <div class="trio-bar-item">
+              <div class="trio-bar-top"><span>Jaringan Dasar</span><span>65%</span></div>
+              <div class="trio-bar-track"><div class="trio-bar-fill" style="width:65%"></div></div>
             </div>
           </div>
-          <div class="acc-item">
-            <button class="acc-header">
-              <span class="acc-icon">⊕</span> Persamaan Lingkaran (Pusat A)
-              <svg class="acc-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
-            </button>
-            <div class="acc-body">
-              <p>Persamaan lingkaran dengan pusat di titik A(a,b) dan jari-jari r:</p>
-              <div class="formula-mini">(x−a)² + (y−b)² = r²</div>
+          <div class="trio-soft-tags">
+            <span class="tag tag-teal">Disiplin</span>
+            <span class="tag tag-teal">Mandiri</span>
+            <span class="tag tag-teal">Tanggung Jawab</span>
+          </div>
+        </div>
+
+        <!-- Card 3: Cita-cita — quote style -->
+        <div class="trio-card trio-card--cita glass-card">
+          <div class="trio-card-glow trio-card-glow--dim"></div>
+          <p class="trio-label">Cita-cita & Karier</p>
+          <div class="trio-cita-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><path d="m9 11 3 3L22 4"/></svg>
+          </div>
+          <p class="trio-cita-text">Terus mengembangkan kemampuan di bidang teknologi — khususnya web dan jaringan — dan berkontribusi nyata di dunia digital.</p>
+          <div class="trio-cita-badge">Web Developer</div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ KEAHLIAN ============ -->
+  <section id="keahlian" class="section">
+    <div class="section-container">
+      <div class="section-header reveal">
+        <p class="section-subtitle">Kemampuan</p>
+        <h2 class="section-title">Keahlian</h2>
+        <div class="section-line"></div>
+      </div>
+
+      <div class="glass-card skills-card reveal">
+        <div class="skill-item" data-percent="70">
+          <div class="skill-info">
+            <div>
+              <h4 class="skill-name">UI/UX Design</h4>
+              <p class="skill-desc">Mendesain tampilan antarmuka yang intuitif dan menarik</p>
+            </div>
+            <span class="skill-percent">70%</span>
+          </div>
+          <div class="skill-bar">
+            <div class="skill-bar-fill"></div>
+          </div>
+        </div>
+
+        <div class="skill-item" data-percent="60">
+          <div class="skill-info">
+            <div>
+              <h4 class="skill-name">Frontend Development</h4>
+              <p class="skill-desc">Membangun halaman web dengan HTML, CSS, dan JavaScript</p>
+            </div>
+            <span class="skill-percent">60%</span>
+          </div>
+          <div class="skill-bar">
+            <div class="skill-bar-fill"></div>
+          </div>
+        </div>
+
+        <div class="skill-item" data-percent="70">
+          <div class="skill-info">
+            <div>
+              <h4 class="skill-name">Jaringan Komputer</h4>
+              <p class="skill-desc">Memahami konsep dasar jaringan dan infrastruktur</p>
+            </div>
+            <span class="skill-percent">70%</span>
+          </div>
+          <div class="skill-bar">
+            <div class="skill-bar-fill"></div>
+          </div>
+        </div>
+
+        <div class="skill-item" data-percent="60">
+          <div class="skill-info">
+            <div>
+              <h4 class="skill-name">Editing & Desain</h4>
+              <p class="skill-desc">Mengedit dan membuat konten visual menggunakan Canva</p>
+            </div>
+            <span class="skill-percent">60%</span>
+          </div>
+          <div class="skill-bar">
+            <div class="skill-bar-fill"></div>
+          </div>
+        </div>
+      </div>
+
+      <p class="skills-note reveal">Terus belajar dan mengembangkan kemampuan setiap hari</p>
+    </div>
+  </section>
+
+  <!-- ============ PORTFOLIO ============ -->
+  <section id="portfolio" class="section">
+    <div class="section-container">
+      <div class="section-header reveal">
+        <p class="section-subtitle">Karya Saya</p>
+        <h2 class="section-title">Portfolio</h2>
+        <div class="section-line"></div>
+      </div>
+
+      <!-- Tab Navbar -->
+      <div class="porto-tabs reveal">
+        <button class="porto-tab active" data-tab="website">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="14" x="2" y="3" rx="2"/><line x1="8" x2="16" y1="21" y2="21"/><line x1="12" x2="12" y1="17" y2="21"/></svg>
+          Website
+        </button>
+        <button class="porto-tab" data-tab="iot">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.376 3.622a1 1 0 0 1 3.002 3.002L7.368 18.635a2 2 0 0 1-.855.506l-2.872.838a.5.5 0 0 1-.62-.62l.838-2.872a2 2 0 0 1 .506-.855z"/></svg>
+          IoT
+        </button>
+        <button class="porto-tab" data-tab="desain">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="13.5" cy="6.5" r=".5"/><circle cx="17.5" cy="10.5" r=".5"/><circle cx="8.5" cy="7.5" r=".5"/><circle cx="6.5" cy="12.5" r=".5"/><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10c.926 0 1.648-.746 1.648-1.688 0-.437-.18-.835-.437-1.125-.29-.289-.438-.652-.438-1.125a1.64 1.64 0 0 1 1.668-1.668h1.996c3.051 0 5.555-2.503 5.555-5.554C21.965 6.012 17.461 2 12 2z"/></svg>
+          Desain
+        </button>
+        <button class="porto-tab" data-tab="sertifikat">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><path d="m9 11 3 3L22 4"/></svg>
+          Sertifikat
+        </button>
+      </div>
+
+      <!-- ===== TAB: WEBSITE ===== -->
+      <!-- Layout: item1 besar kiri (row span 2) | item2 kanan atas | item3 kanan bawah kecil | item4 bawah lebar -->
+      <div class="porto-panel active" data-panel="website">
+        <div class="porto-mosaic porto-mosaic--a">
+          <div class="porto-item porto-item--a1" data-preview="kotasemarang">
+            <div class="porto-item-bg" style="background-image: url('assets/Screenshot 2026-05-05 193023.png')"></div>
+            <div class="porto-item-overlay"></div>
+            <div class="porto-item-marquee"><span>kotasemarangku &nbsp;·&nbsp; kotasemarangku &nbsp;·&nbsp; kotasemarangku &nbsp;·&nbsp; kotasemarangku &nbsp;·&nbsp;</span></div>
+            <div class="porto-item-meta"><span class="porto-item-cat">Website</span><span class="porto-item-year">2025</span></div>
+            <div class="porto-item-info"><h3>kotasemarangku</h3><span class="porto-item-num">01</span></div>
+            <div class="porto-item-hover-detail"><p>Website informatif tentang Kota Semarang — sejarah, budaya, wisata, dan kuliner.</p><a href="https://kotasemarangku.infinityfreeapp.com/index.html" target="_blank" rel="noopener noreferrer" class="porto-item-link">Lihat Karya →</a></div>
+          </div>
+          <div class="porto-item porto-item--a2 porto-item--coming">
+            <div class="porto-item-overlay"></div>
+            <div class="porto-item-marquee"><span>Coming Soon &nbsp;·&nbsp; Coming soon &nbsp;·&nbsp; Coming Soon &nbsp;·&nbsp; Coming Soon &nbsp;·&nbsp;</span></div>
+            <div class="porto-item-meta"><span class="porto-item-cat">Website</span><span class="porto-item-year">—</span></div>
+            <div class="porto-item-info"><h3>Coming Soon</h3><span class="porto-item-num">02</span></div>
+            <div class="porto-item-hover-detail"><p>Proyek website berikutnya sedang dalam pengembangan.</p></div>
+          </div>
+          <div class="porto-item porto-item--a3 porto-item--coming">
+            <div class="porto-item-overlay"></div>
+            <div class="porto-item-marquee"><span>Coming Soon &nbsp;·&nbsp; Coming soon &nbsp;·&nbsp; Coming Soon &nbsp;·&nbsp; Coming Soon &nbsp;·&nbsp;</span></div>
+            <div class="porto-item-meta"><span class="porto-item-cat">Website</span><span class="porto-item-year">—</span></div>
+            <div class="porto-item-info"><h3>Coming Soon</h3><span class="porto-item-num">03</span></div>
+            <div class="porto-item-hover-detail"><p>Proyek website berikutnya sedang dalam pengembangan.</p></div>
+          </div>
+          <div class="porto-item porto-item--a4 porto-item--coming">
+            <div class="porto-item-overlay"></div>
+            <div class="porto-item-marquee"><span>Coming Soon &nbsp;·&nbsp; Coming soon &nbsp;·&nbsp; Coming Soon &nbsp;·&nbsp; Coming Soon &nbsp;·&nbsp;</span></div>
+            <div class="porto-item-meta"><span class="porto-item-cat">Website</span><span class="porto-item-year">—</span></div>
+            <div class="porto-item-info"><h3>Coming Soon</h3><span class="porto-item-num">04</span></div>
+            <div class="porto-item-hover-detail"><p>Proyek website berikutnya sedang dalam pengembangan.</p></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ===== TAB: IoT ===== -->
+      <!-- Layout: item1 lebar atas | item2 kanan atas kecil | item3 kiri bawah kecil | item4 besar kanan bawah -->
+      <div class="porto-panel" data-panel="iot">
+        <div class="porto-mosaic porto-mosaic--b">
+          <div class="porto-item porto-item--b1 porto-item--coming">
+            <div class="porto-item-overlay"></div>
+            <div class="porto-item-marquee"><span>Coming Soon &nbsp;·&nbsp; Coming soon &nbsp;·&nbsp; Coming Soon &nbsp;·&nbsp; Coming Soon &nbsp;·&nbsp; Coming Soon &nbsp;·&nbsp; Coming Soon &nbsp;·&nbsp; Coming Soon &nbsp;·&nbsp; Coming Soon &nbsp;·&nbsp;</span></div>
+            <div class="porto-item-meta"><span class="porto-item-cat">IoT</span><span class="porto-item-year">—</span></div>
+            <div class="porto-item-info"><h3>Coming Soon</h3><span class="porto-item-num">01</span></div>
+            <div class="porto-item-hover-detail"><p>Proyek IoT sedang dalam pengembangan.</p></div>
+          </div>
+          <div class="porto-item porto-item--b2 porto-item--coming">
+            <div class="porto-item-overlay"></div>
+            <div class="porto-item-marquee"><span>Coming Soon &nbsp;·&nbsp; Coming soon &nbsp;·&nbsp; Coming Soon &nbsp;·&nbsp; Coming Soon &nbsp;·&nbsp;</span></div>
+            <div class="porto-item-meta"><span class="porto-item-cat">IoT</span><span class="porto-item-year">—</span></div>
+            <div class="porto-item-info"><h3>Coming Soon</h3><span class="porto-item-num">02</span></div>
+            <div class="porto-item-hover-detail"><p>Proyek IoT sedang dalam pengembangan.</p></div>
+          </div>
+          <div class="porto-item porto-item--b3 porto-item--coming">
+            <div class="porto-item-overlay"></div>
+            <div class="porto-item-marquee"><span>Coming Soon &nbsp;·&nbsp; Coming soon &nbsp;·&nbsp; Coming Soon &nbsp;·&nbsp; Coming Soon &nbsp;·&nbsp;</span></div>
+            <div class="porto-item-meta"><span class="porto-item-cat">IoT</span><span class="porto-item-year">—</span></div>
+            <div class="porto-item-info"><h3>Coming Soon</h3><span class="porto-item-num">03</span></div>
+            <div class="porto-item-hover-detail"><p>Proyek IoT sedang dalam pengembangan.</p></div>
+          </div>
+          <div class="porto-item porto-item--b4 porto-item--coming">
+            <div class="porto-item-overlay"></div>
+            <div class="porto-item-marquee"><span>Coming Soon &nbsp;·&nbsp; Coming soon &nbsp;·&nbsp; Coming Soon &nbsp;·&nbsp; Coming Soon &nbsp;·&nbsp;</span></div>
+            <div class="porto-item-meta"><span class="porto-item-cat">IoT</span><span class="porto-item-year">—</span></div>
+            <div class="porto-item-info"><h3>Coming Soon</h3><span class="porto-item-num">04</span></div>
+            <div class="porto-item-hover-detail"><p>Proyek IoT sedang dalam pengembangan.</p></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ===== TAB: DESAIN ===== -->
+      <!-- Layout: item1 kecil kiri atas | item2 besar tengah (row span 2) | item3 kecil kanan atas | item4 lebar bawah -->
+      <div class="porto-panel" data-panel="desain">
+        <div class="porto-mosaic porto-mosaic--c">
+          <div class="porto-item porto-item--c1">
+            <div class="porto-item-bg" style="background-image: url('assets/Poster Mobil-1.png')"></div>
+            <div class="porto-item-overlay"></div>
+            <div class="porto-item-marquee"><span>Poster Mobil &nbsp;·&nbsp; Poster Mobil &nbsp;·&nbsp; Poster Mobil &nbsp;·&nbsp;</span></div>
+            <div class="porto-item-meta"><span class="porto-item-cat">Desain</span><span class="porto-item-year">2025</span></div>
+            <div class="porto-item-info"><h3>Poster Mobil 1</h3><span class="porto-item-num">01</span></div>
+            <div class="porto-item-hover-detail"><p>Poster desain mobil — karya desain grafis menggunakan Canva.</p></div>
+          </div>
+          <div class="porto-item porto-item--c2">
+            <div class="porto-item-bg" style="background-image: url('assets/Poster Mobil -2.png')"></div>
+            <div class="porto-item-overlay"></div>
+            <div class="porto-item-marquee"><span>Poster Mobil &nbsp;·&nbsp; Poster Mobil &nbsp;·&nbsp; Poster Mobil &nbsp;·&nbsp; Poster Mobil &nbsp;·&nbsp; Poster Mobil &nbsp;·&nbsp; Poster Mobil &nbsp;·&nbsp;</span></div>
+            <div class="porto-item-meta"><span class="porto-item-cat">Desain</span><span class="porto-item-year">2025</span></div>
+            <div class="porto-item-info"><h3>Poster Mobil 2</h3><span class="porto-item-num">02</span></div>
+            <div class="porto-item-hover-detail"><p>Poster desain mobil — karya desain grafis menggunakan Canva.</p></div>
+          </div>
+          <div class="porto-item porto-item--c3">
+            <div class="porto-item-bg" style="background-image: url('assets/Poster Mobil -3.png')"></div>
+            <div class="porto-item-overlay"></div>
+            <div class="porto-item-marquee"><span>Poster Mobil &nbsp;·&nbsp; Poster Mobil &nbsp;·&nbsp; Poster Mobil &nbsp;·&nbsp;</span></div>
+            <div class="porto-item-meta"><span class="porto-item-cat">Desain</span><span class="porto-item-year">2025</span></div>
+            <div class="porto-item-info"><h3>Poster Mobil 3</h3><span class="porto-item-num">03</span></div>
+            <div class="porto-item-hover-detail"><p>Poster desain mobil — karya desain grafis menggunakan Canva.</p></div>
+          </div>
+          <div class="porto-item porto-item--c4">
+            <div class="porto-item-bg" style="background-image: url('assets/Poster Mobil-4.png')"></div>
+            <div class="porto-item-overlay"></div>
+            <div class="porto-item-marquee"><span>Poster Mobil &nbsp;·&nbsp; Poster Mobil &nbsp;·&nbsp; Poster Mobil &nbsp;·&nbsp;</span></div>
+            <div class="porto-item-meta"><span class="porto-item-cat">Desain</span><span class="porto-item-year">2025</span></div>
+            <div class="porto-item-info"><h3>Poster Mobil 4</h3><span class="porto-item-num">04</span></div>
+            <div class="porto-item-hover-detail"><p>Poster desain mobil — karya desain grafis menggunakan Canva.</p></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ===== TAB: SERTIFIKAT ===== -->
+      <!-- Layout: item1+2 baris atas (50/50) | item3 besar kiri bawah | item4 kecil kanan bawah -->
+      <div class="porto-panel" data-panel="sertifikat">
+        <div class="porto-mosaic porto-mosaic--d">
+          <div class="porto-item porto-item--d1">
+            <div class="porto-item-bg" style="background-image: url('assets/sertifikat hour of code.jpg')"></div>
+            <div class="porto-item-overlay"></div>
+            <div class="porto-item-marquee"><span>Hour of Code &nbsp;·&nbsp; Hour of Code &nbsp;·&nbsp; Hour of Code &nbsp;·&nbsp; Hour of Code &nbsp;·&nbsp;</span></div>
+            <div class="porto-item-meta"><span class="porto-item-cat">Sertifikat</span><span class="porto-item-year">2024</span></div>
+            <div class="porto-item-info"><h3>Hour of Code</h3><span class="porto-item-num">01</span></div>
+            <div class="porto-item-hover-detail"><p>Certificate of Completion — Hour of Code, pemahaman dasar konsep Computer Science oleh Code.org × Minecraft.</p></div>
+          </div>
+          <div class="porto-item porto-item--d2">
+            <div class="porto-item-bg" style="background-image: url('assets/sertifikat cisco.jpg')"></div>
+            <div class="porto-item-overlay"></div>
+            <div class="porto-item-marquee"><span>IT Essentials &nbsp;·&nbsp; Cisco &nbsp;·&nbsp; IT Essentials &nbsp;·&nbsp; Cisco &nbsp;·&nbsp;</span></div>
+            <div class="porto-item-meta"><span class="porto-item-cat">Sertifikat</span><span class="porto-item-year">2025</span></div>
+            <div class="porto-item-info"><h3>IT Essentials</h3><span class="porto-item-num">02</span></div>
+            <div class="porto-item-hover-detail"><p>Cisco Networking Academy — IT Essentials, diselesaikan melalui SMK Negeri 7 Semarang. 28 Jan 2025.</p></div>
+          </div>
+          <div class="porto-item porto-item--d3 porto-item--coming">
+            <div class="porto-item-overlay"></div>
+            <div class="porto-item-marquee"><span>Coming Soon &nbsp;·&nbsp; Coming soon &nbsp;·&nbsp; Coming Soon &nbsp;·&nbsp; Coming Soon &nbsp;·&nbsp;</span></div>
+            <div class="porto-item-meta"><span class="porto-item-cat">Sertifikat</span><span class="porto-item-year">—</span></div>
+            <div class="porto-item-info"><h3>Coming Soon</h3><span class="porto-item-num">03</span></div>
+            <div class="porto-item-hover-detail"><p>Sertifikat akan segera ditambahkan.</p></div>
+          </div>
+          <div class="porto-item porto-item--d4 porto-item--coming">
+            <div class="porto-item-overlay"></div>
+            <div class="porto-item-marquee"><span>Coming Soon &nbsp;·&nbsp; Coming soon &nbsp;·&nbsp; Coming Soon &nbsp;·&nbsp; Coming Soon &nbsp;·&nbsp; Coming Soon &nbsp;·&nbsp; Coming Soon &nbsp;·&nbsp; Coming Soon &nbsp;·&nbsp; Coming Soon &nbsp;·&nbsp;</span></div>
+            <div class="porto-item-meta"><span class="porto-item-cat">Sertifikat</span><span class="porto-item-year">—</span></div>
+            <div class="porto-item-info"><h3>Coming Soon</h3><span class="porto-item-num">04</span></div>
+            <div class="porto-item-hover-detail"><p>Sertifikat akan segera ditambahkan.</p></div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ============ CURRICULUM VITAE ============ -->
+  <section id="cv" class="section">
+    <div class="section-container">
+      <div class="section-header reveal">
+        <p class="section-subtitle">Data Lengkap</p>
+        <h2 class="section-title">Curriculum Vitae</h2>
+        <div class="section-line"></div>
+      </div>
+
+      <div class="cv-card glass-card reveal">
+        <!-- CV Header -->
+        <div class="cv-header">
+          <div class="cv-photo">
+            <div class="cv-photo-border"></div>
+            <img src="assets/ChatGPT Image 6 Mei 2026, 10.00.20.png" alt="Nauval Ikram Wicaksono">
+          </div>
+          <div class="cv-header-text">
+            <h3>Nauval Ikram Wicaksono</h3>
+            <p class="cv-role">Aspiring Web Developer</p>
+            <p class="cv-school">Siswa SMK Negeri 7 Semarang &mdash; Sistem Informasi Jaringan Aplikasi</p>
+          </div>
+        </div>
+
+        <div class="cv-body">
+          <div class="cv-col-left">
+            <!-- Data Pribadi -->
+            <div class="cv-section">
+              <h4 class="cv-section-title">
+                <span class="cv-section-line"></span>
+                Data Pribadi
+              </h4>
+              <div class="cv-data-list">
+                <div class="cv-data-item">
+                  <div class="cv-data-icon">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M20 21a8 8 0 1 0-16 0"/></svg>
+                  </div>
+                  <div>
+                    <p class="cv-data-label">Nama Lengkap</p>
+                    <p class="cv-data-value">Nauval Ikram Wicaksono</p>
+                  </div>
+                </div>
+                <div class="cv-data-item">
+                  <div class="cv-data-icon">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+                  </div>
+                  <div>
+                    <p class="cv-data-label">Kota</p>
+                    <p class="cv-data-value">Semarang, Jawa Tengah</p>
+                  </div>
+                </div>
+                <div class="cv-data-item">
+                  <div class="cv-data-icon">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="18" x="3" y="4" rx="2"/><line x1="16" x2="16" y1="2" y2="6"/><line x1="8" x2="8" y1="2" y2="6"/><line x1="3" x2="21" y1="10" y2="10"/></svg>
+                  </div>
+                  <div>
+                    <p class="cv-data-label">Tanggal Lahir</p>
+                    <p class="cv-data-value">21 November 2008</p>
+                  </div>
+                </div>
+                <div class="cv-data-item">
+                  <div class="cv-data-icon">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+                  </div>
+                  <div>
+                    <p class="cv-data-label">Sekolah</p>
+                    <p class="cv-data-value">SMK Negeri 7 Semarang</p>
+                  </div>
+                </div>
+                <div class="cv-data-item">
+                  <div class="cv-data-icon">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+                  </div>
+                  <div>
+                    <p class="cv-data-label">Email</p>
+                    <p class="cv-data-value">nauvalikramwicaksono@gmail.com</p>
+                  </div>
+                </div>
+                <div class="cv-data-item">
+                  <div class="cv-data-icon">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                  </div>
+                  <div>
+                    <p class="cv-data-label">Telepon</p>
+                    <p class="cv-data-value">+62-888-3973-694</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Keahlian -->
+            <div class="cv-section">
+              <h4 class="cv-section-title">
+                <span class="cv-section-line"></span>
+                Keahlian
+              </h4>
+              <div class="cv-skills-list">
+                <div class="cv-skill-bar-item">
+                  <div class="cv-skill-bar-header">
+                    <span class="cv-skill-bar-name">UI/UX Design</span>
+                    <span class="cv-skill-bar-pct">70%</span>
+                  </div>
+                  <div class="cv-skill-bar-track"><div class="cv-skill-bar-fill" style="width:70%"></div></div>
+                </div>
+                <div class="cv-skill-bar-item">
+                  <div class="cv-skill-bar-header">
+                    <span class="cv-skill-bar-name">Frontend (HTML &amp; CSS)</span>
+                    <span class="cv-skill-bar-pct">60%</span>
+                  </div>
+                  <div class="cv-skill-bar-track"><div class="cv-skill-bar-fill" style="width:60%"></div></div>
+                </div>
+                <div class="cv-skill-bar-item">
+                  <div class="cv-skill-bar-header">
+                    <span class="cv-skill-bar-name">Jaringan Komputer</span>
+                    <span class="cv-skill-bar-pct">70%</span>
+                  </div>
+                  <div class="cv-skill-bar-track"><div class="cv-skill-bar-fill" style="width:70%"></div></div>
+                </div>
+                <div class="cv-skill-bar-item">
+                  <div class="cv-skill-bar-header">
+                    <span class="cv-skill-bar-name">Editing / Desain Canva</span>
+                    <span class="cv-skill-bar-pct">60%</span>
+                  </div>
+                  <div class="cv-skill-bar-track"><div class="cv-skill-bar-fill" style="width:60%"></div></div>
+                </div>
+              </div>
             </div>
           </div>
-          <div class="acc-item">
-            <button class="acc-header">
-              <span class="acc-icon">≡</span> Bentuk Umum
-              <svg class="acc-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
-            </button>
-            <div class="acc-body">
-              <p>Bentuk umum persamaan lingkaran:</p>
-              <div class="formula-mini">x² + y² + Dx + Ey + F = 0</div>
-              <p style="margin-top:8px;font-size:0.85rem;opacity:0.8">Pusat: (−D/2, −E/2), r = √((D/2)²+(E/2)²−F)</p>
+
+          <div class="cv-col-right">
+            <!-- Tentang Saya -->
+            <div class="cv-section">
+              <h4 class="cv-section-title">
+                <span class="cv-section-line"></span>
+                Tentang Saya
+              </h4>
+              <p class="cv-about-text">Saya adalah siswa SMK Negeri 7 Semarang jurusan Sistem Informasi Jaringan Aplikasi yang memiliki minat di bidang pengembangan web dan teknologi digital. Saya berfokus pada pembuatan website yang menarik, fungsional, dan bermanfaat, serta terus mengembangkan kemampuan setiap harinya.</p>
+            </div>
+
+            <!-- Riwayat Pendidikan -->
+            <div class="cv-section">
+              <h4 class="cv-section-title">
+                <span class="cv-section-line"></span>
+                Riwayat Pendidikan
+              </h4>
+              <div class="cv-edu-list">
+                <div class="cv-edu-item active">
+                  <div class="cv-edu-content">
+                    <h5>SMK Negeri 7 Semarang</h5>
+                    <p>Sistem Informasi Jaringan Aplikasi &mdash; Kota Semarang</p>
+                  </div>
+                  <span class="cv-edu-year">2024 - Sekarang</span>
+                </div>
+                <div class="cv-edu-item">
+                  <div class="cv-edu-content">
+                    <h5>SMP Negeri 1 Ungaran</h5>
+                    <p>Kab. Semarang</p>
+                  </div>
+                  <span class="cv-edu-year">2021 - 2024</span>
+                </div>
+                <div class="cv-edu-item">
+                  <div class="cv-edu-content">
+                    <h5>SD Negeri Genuk 02, Ungaran Barat</h5>
+                    <p>Kab. Semarang</p>
+                  </div>
+                  <span class="cv-edu-year">2015 - 2021</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Quote -->
+            <div class="cv-quote">
+              <svg class="quote-icon" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21c3 0 7-1 7-8V5c0-1.25-.756-2.017-2-2H4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2 1 0 1 0 1 1v1c0 1-1 2-2 2s-1 .008-1 1.031V21z"/><path d="M15 21c3 0 7-1 7-8V5c0-1.25-.757-2.017-2-2h-4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2h.75c0 2.25.25 4-2.75 4v3z"/></svg>
+              <div class="quote-text">
+                <p>&ldquo;Hidup ini sebenarnya sederhana, tetapi kita bersikeras membuatnya menjadi rumit.&rdquo;</p>
+                <span>&mdash; Konfusius</span>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- VISUALISASI INTERAKTIF -->
-<section id="visualisasi" class="section visualisasi-section">
-  <div class="container">
-    <div class="section-header reveal">
-      <span class="section-badge">Interaktif</span>
-      <h2>Visualisasi <span class="gradient-text">Lingkaran</span></h2>
-      <p>Geser slider untuk melihat perubahan lingkaran secara real-time</p>
-    </div>
-    <div class="viz-wrapper reveal">
-      <div class="viz-canvas-area">
-        <canvas id="circleCanvas" width="380" height="380"></canvas>
-      </div>
-      <div class="viz-controls">
-        <div class="viz-slider-group">
-          <label>Jari-Jari (r)</label>
-          <div class="slider-row">
-            <input type="range" id="radiusSlider" min="20" max="150" value="80" class="custom-slider"/>
-            <span id="radiusVal" class="slider-val">80</span>
-          </div>
-        </div>
-        <div class="viz-results">
-          <div class="viz-card">
-            <span class="viz-label">Jari-Jari</span>
-            <span class="viz-value" id="vRadius">80</span>
-            <span class="viz-unit">satuan</span>
-          </div>
-          <div class="viz-card">
-            <span class="viz-label">Diameter</span>
-            <span class="viz-value" id="vDiameter">160</span>
-            <span class="viz-unit">satuan</span>
-          </div>
-          <div class="viz-card highlight">
-            <span class="viz-label">Keliling</span>
-            <span class="viz-value" id="vKeliling">502.65</span>
-            <span class="viz-unit">satuan</span>
-          </div>
-          <div class="viz-card highlight">
-            <span class="viz-label">Luas</span>
-            <span class="viz-value" id="vLuas">20106.19</span>
-            <span class="viz-unit">satuan²</span>
-          </div>
-        </div>
-        <div class="viz-formula-display">
-          <div class="vf-row"><span>K = 2π × <span id="vfR">80</span></span><span class="vf-result" id="vfK">= 502.65</span></div>
-          <div class="vf-row"><span>L = π × <span id="vfR2">80</span>²</span><span class="vf-result" id="vfL">= 20106.19</span></div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+  <!-- ============ FOOTER ============ -->
+  <footer class="footer" id="kontak">
+    <div class="footer-line"></div>
+    <div class="footer-content">
+      <div class="section-container">
 
-<!-- RUMUS LINGKARAN -->
-<section id="rumus" class="section rumus-section">
-  <div class="container">
-    <div class="section-header reveal">
-      <span class="section-badge">Referensi</span>
-      <h2>Rumus <span class="gradient-text">Lingkaran</span></h2>
-      <p>Kumpulan rumus penting yang perlu kamu hafal</p>
-    </div>
-    <div class="rumus-grid">
-      <div class="rumus-card glass reveal" data-delay="0">
-        <div class="rumus-icon">K</div>
-        <h3>Keliling Lingkaran</h3>
-        <div class="rumus-formula">K = 2πr</div>
-        <div class="rumus-alt">K = πd</div>
-        <div class="rumus-symbols">
-          <span><strong>K</strong> = Keliling</span>
-          <span><strong>π</strong> ≈ 3,14 atau 22/7</span>
-          <span><strong>r</strong> = jari-jari</span>
-          <span><strong>d</strong> = diameter</span>
-        </div>
-        <div class="rumus-example">
-          <strong>Contoh:</strong> r = 7 cm<br/>
-          K = 2 × 22/7 × 7 = <strong>44 cm</strong>
-        </div>
-      </div>
-      <div class="rumus-card glass reveal" data-delay="150">
-        <div class="rumus-icon">L</div>
-        <h3>Luas Lingkaran</h3>
-        <div class="rumus-formula">L = πr²</div>
-        <div class="rumus-alt">L = ¼πd²</div>
-        <div class="rumus-symbols">
-          <span><strong>L</strong> = Luas</span>
-          <span><strong>π</strong> ≈ 3,14 atau 22/7</span>
-          <span><strong>r</strong> = jari-jari</span>
-        </div>
-        <div class="rumus-example">
-          <strong>Contoh:</strong> r = 7 cm<br/>
-          L = 22/7 × 7² = <strong>154 cm²</strong>
-        </div>
-      </div>
-      <div class="rumus-card glass reveal" data-delay="300">
-        <div class="rumus-icon">⌒</div>
-        <h3>Panjang Busur</h3>
-        <div class="rumus-formula">PB = (α/360°) × 2πr</div>
-        <div class="rumus-symbols">
-          <span><strong>PB</strong> = Panjang Busur</span>
-          <span><strong>α</strong> = sudut pusat (°)</span>
-        </div>
-        <div class="rumus-example">
-          <strong>Contoh:</strong> α=90°, r=14 cm<br/>
-          PB = (90/360) × 2×22/7×14 = <strong>22 cm</strong>
-        </div>
-      </div>
-      <div class="rumus-card glass reveal" data-delay="450">
-        <div class="rumus-icon">◔</div>
-        <h3>Luas Juring</h3>
-        <div class="rumus-formula">LJ = (α/360°) × πr²</div>
-        <div class="rumus-symbols">
-          <span><strong>LJ</strong> = Luas Juring</span>
-          <span><strong>α</strong> = sudut pusat (°)</span>
-        </div>
-        <div class="rumus-example">
-          <strong>Contoh:</strong> α=90°, r=14 cm<br/>
-          LJ = (90/360) × 22/7 × 196 = <strong>154 cm²</strong>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+        <div class="footer-grid reveal">
 
-<!-- CONTOH SOAL -->
-<section id="soal" class="section soal-section">
-  <div class="container">
-    <div class="section-header reveal">
-      <span class="section-badge">Latihan</span>
-      <h2>Contoh Soal & <span class="gradient-text">Pembahasan</span></h2>
-      <p>Pelajari cara menyelesaikan soal-soal lingkaran dengan langkah yang jelas</p>
-    </div>
-    <div class="soal-list">
+          <!-- Kolom 1: Brand + Deskripsi -->
+          <div class="footer-brand-col">
+            <div class="footer-brand-wrap">
+              <p class="footer-brand-name">
+                <span class="gradient-text">Nauval Ikram</span><br>Wicaksono
+              </p>
+            </div>
+            <p class="footer-brand-tagline">Aspiring Web Developer &bull; Exploring Digital Technology</p>
+          </div>
 
-      <div class="soal-card reveal">
-        <div class="soal-header">
-          <span class="soal-num">01</span>
-          <div class="soal-content">
-            <p class="soal-q">Sebuah lingkaran memiliki jari-jari 14 cm. Hitunglah keliling dan luas lingkaran tersebut! (π = 22/7)</p>
-          </div>
-          <button class="soal-toggle">Lihat Jawaban <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg></button>
-        </div>
-        <div class="soal-answer">
-          <div class="answer-steps">
-            <div class="step"><span class="step-num">1</span><p><strong>Diketahui:</strong> r = 14 cm, π = 22/7</p></div>
-            <div class="step"><span class="step-num">2</span><p><strong>Keliling:</strong> K = 2πr = 2 × 22/7 × 14 = 88 cm</p></div>
-            <div class="step"><span class="step-num">3</span><p><strong>Luas:</strong> L = πr² = 22/7 × 14² = 22/7 × 196 = 616 cm²</p></div>
-            <div class="step answer-final"><span class="step-num">✓</span><p><strong>Keliling = 88 cm, Luas = 616 cm²</strong></p></div>
-          </div>
-        </div>
-      </div>
-
-      <div class="soal-card reveal">
-        <div class="soal-header">
-          <span class="soal-num">02</span>
-          <div class="soal-content">
-            <p class="soal-q">Keliling sebuah lingkaran adalah 88 cm. Tentukan jari-jari dan luas lingkaran tersebut! (π = 22/7)</p>
-          </div>
-          <button class="soal-toggle">Lihat Jawaban <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg></button>
-        </div>
-        <div class="soal-answer">
-          <div class="answer-steps">
-            <div class="step"><span class="step-num">1</span><p><strong>Diketahui:</strong> K = 88 cm, π = 22/7</p></div>
-            <div class="step"><span class="step-num">2</span><p><strong>Cari r:</strong> K = 2πr → 88 = 2 × 22/7 × r → r = 88 × 7 / 44 = 14 cm</p></div>
-            <div class="step"><span class="step-num">3</span><p><strong>Luas:</strong> L = πr² = 22/7 × 196 = 616 cm²</p></div>
-            <div class="step answer-final"><span class="step-num">✓</span><p><strong>r = 14 cm, Luas = 616 cm²</strong></p></div>
-          </div>
-        </div>
-      </div>
-
-      <div class="soal-card reveal">
-        <div class="soal-header">
-          <span class="soal-num">03</span>
-          <div class="soal-content">
-            <p class="soal-q">Sudut pusat AOB = 120°. Jika jari-jari lingkaran 21 cm, hitunglah panjang busur AB dan luas juring AOB! (π = 22/7)</p>
-          </div>
-          <button class="soal-toggle">Lihat Jawaban <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg></button>
-        </div>
-        <div class="soal-answer">
-          <div class="answer-steps">
-            <div class="step"><span class="step-num">1</span><p><strong>Diketahui:</strong> α = 120°, r = 21 cm</p></div>
-            <div class="step"><span class="step-num">2</span><p><strong>Panjang Busur:</strong> PB = (120/360) × 2 × 22/7 × 21 = 1/3 × 132 = 44 cm</p></div>
-            <div class="step"><span class="step-num">3</span><p><strong>Luas Juring:</strong> LJ = (120/360) × 22/7 × 441 = 1/3 × 1386 = 462 cm²</p></div>
-            <div class="step answer-final"><span class="step-num">✓</span><p><strong>Busur AB = 44 cm, Luas Juring = 462 cm²</strong></p></div>
-          </div>
-        </div>
-      </div>
-
-      <div class="soal-card reveal">
-        <div class="soal-header">
-          <span class="soal-num">04</span>
-          <div class="soal-content">
-            <p class="soal-q">Sudut keliling ACB = 35°. Berapakah besar sudut pusat AOB yang menghadap busur yang sama?</p>
-          </div>
-          <button class="soal-toggle">Lihat Jawaban <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg></button>
-        </div>
-        <div class="soal-answer">
-          <div class="answer-steps">
-            <div class="step"><span class="step-num">1</span><p><strong>Diketahui:</strong> ∠ACB = 35° (sudut keliling)</p></div>
-            <div class="step"><span class="step-num">2</span><p><strong>Hubungan:</strong> Sudut pusat = 2 × sudut keliling</p></div>
-            <div class="step"><span class="step-num">3</span><p><strong>Hitung:</strong> ∠AOB = 2 × 35° = 70°</p></div>
-            <div class="step answer-final"><span class="step-num">✓</span><p><strong>∠AOB = 70°</strong></p></div>
-          </div>
-        </div>
-      </div>
-
-      <div class="soal-card reveal">
-        <div class="soal-header">
-          <span class="soal-num">05</span>
-          <div class="soal-content">
-            <p class="soal-q">Tentukan persamaan lingkaran yang berpusat di A(3, −2) dengan jari-jari 5!</p>
-          </div>
-          <button class="soal-toggle">Lihat Jawaban <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg></button>
-        </div>
-        <div class="soal-answer">
-          <div class="answer-steps">
-            <div class="step"><span class="step-num">1</span><p><strong>Diketahui:</strong> Pusat A(3, −2), r = 5</p></div>
-            <div class="step"><span class="step-num">2</span><p><strong>Rumus:</strong> (x − a)² + (y − b)² = r²</p></div>
-            <div class="step"><span class="step-num">3</span><p><strong>Substitusi:</strong> (x − 3)² + (y − (−2))² = 5²</p></div>
-            <div class="step"><span class="step-num">4</span><p><strong>Sederhanakan:</strong> (x − 3)² + (y + 2)² = 25</p></div>
-            <div class="step answer-final"><span class="step-num">✓</span><p><strong>(x − 3)² + (y + 2)² = 25</strong></p></div>
-          </div>
-        </div>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-<!-- KUIS INTERAKTIF -->
-<section id="kuis" class="section kuis-section">
-  <div class="container">
-    <div class="section-header reveal">
-      <span class="section-badge">Uji Kemampuan</span>
-      <h2>Kuis <span class="gradient-text">Interaktif</span></h2>
-      <p>Uji pemahamanmu dengan 10 soal pilihan ganda</p>
-    </div>
-    <div class="kuis-wrapper reveal">
-      <!-- Start Screen -->
-      <div id="kuisStart" class="kuis-screen active">
-        <div class="kuis-start-content">
-          <div class="kuis-start-icon">
-            <svg viewBox="0 0 80 80" fill="none"><circle cx="40" cy="40" r="35" stroke="url(#ks1)" stroke-width="3"/><path d="M28 40l8 8 16-16" stroke="url(#ks1)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><defs><linearGradient id="ks1" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#6C63FF"/><stop offset="1" stop-color="#00D4FF"/></linearGradient></defs></svg>
-          </div>
-          <h3>Siap Mengerjakan Kuis?</h3>
-          <p>10 soal pilihan ganda tentang lingkaran. Timer 15 detik per soal. Soal diacak setiap sesi.</p>
-          <div class="kuis-info-row">
-            <div class="kuis-info-item"><span>10</span><small>Soal</small></div>
-            <div class="kuis-info-item"><span>15s</span><small>Per Soal</small></div>
-            <div class="kuis-info-item"><span>100</span><small>Skor Max</small></div>
-          </div>
-          <button class="btn btn-primary ripple" id="startKuis">Mulai Kuis</button>
-        </div>
-      </div>
-
-      <!-- Quiz Screen -->
-      <div id="kuisPlay" class="kuis-screen">
-        <div class="kuis-top">
-          <div class="kuis-progress-info">
-            <span id="qNum">Soal 1</span> / <span id="qTotal">10</span>
-          </div>
-          <div class="kuis-timer-wrap">
-            <svg class="timer-ring" viewBox="0 0 44 44">
-              <circle cx="22" cy="22" r="18" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="3"/>
-              <circle cx="22" cy="22" r="18" fill="none" stroke="url(#tr1)" stroke-width="3" stroke-dasharray="113" stroke-dashoffset="0" id="timerCircle" stroke-linecap="round"/>
-              <defs><linearGradient id="tr1" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#6C63FF"/><stop offset="1" stop-color="#00D4FF"/></linearGradient></defs>
-            </svg>
-            <span id="timerNum">15</span>
-          </div>
-        </div>
-        <div class="kuis-progress-bar"><div id="kuisProgressFill"></div></div>
-        <div class="kuis-question-area">
-          <p id="questionText" class="question-text"></p>
-          <div id="optionsGrid" class="options-grid"></div>
-        </div>
-      </div>
-
-      <!-- Result Screen -->
-      <div id="kuisResult" class="kuis-screen">
-        <div class="result-content">
-          <div class="result-score-ring">
-            <svg viewBox="0 0 120 120">
-              <circle cx="60" cy="60" r="50" fill="none" stroke="rgba(255,255,255,0.08)" stroke-width="8"/>
-              <circle cx="60" cy="60" r="50" fill="none" stroke="url(#rg1)" stroke-width="8" stroke-dasharray="314" stroke-dashoffset="314" id="resultRing" stroke-linecap="round"/>
-              <defs><linearGradient id="rg1" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#6C63FF"/><stop offset="1" stop-color="#00D4FF"/></linearGradient></defs>
-            </svg>
-            <div class="result-score-text">
-              <span id="finalScore">0</span>
-              <small>/ 100</small>
+          <!-- Kolom 2: Hubungi Kami -->
+          <div class="footer-contact-col">
+            <p class="footer-col-title">Hubungi Kami</p>
+            <div class="footer-contact-list">
+              <a href="mailto:nauvalikramwicaksono@gmail.com" class="footer-contact-item">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+                nauvalikramwicaksono@gmail.com
+              </a>
+              <a href="https://wa.me/628883973694" target="_blank" rel="noopener noreferrer" class="footer-contact-item">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+                +62-888-3973-694
+              </a>
+              <span class="footer-contact-item no-link">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+                Semarang, Jawa Tengah
+              </span>
             </div>
           </div>
-          <h3 id="resultTitle">Hasil Kuis</h3>
-          <p id="resultMotivasi" class="result-motivasi"></p>
-          <div class="result-stats">
-            <div class="rs-item correct"><span id="rBenar">0</span><small>Benar</small></div>
-            <div class="rs-item wrong"><span id="rSalah">0</span><small>Salah</small></div>
-            <div class="rs-item pct"><span id="rPct">0%</span><small>Nilai</small></div>
+
+          <!-- Kolom 3: Media Sosial -->
+          <div class="footer-social-col">
+            <p class="footer-col-title">Media Sosial</p>
+            <div class="footer-socials">
+              <a href="https://wa.me/628883973694" target="_blank" rel="noopener noreferrer" class="social-icon-btn" aria-label="WhatsApp">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+              </a>
+              <a href="mailto:nauvalikramwicaksono@gmail.com" class="social-icon-btn" aria-label="Email">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+              </a>
+              <a href="https://instagram.com/" target="_blank" rel="noopener noreferrer" class="social-icon-btn" aria-label="Instagram">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
+              </a>
+              <a href="tel:+628883973694" class="social-icon-btn" aria-label="Telepon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              </a>
+            </div>
           </div>
-          <div class="result-buttons">
-            <button class="btn btn-primary ripple" id="retryKuis">Ulangi Kuis</button>
-            <a href="#dashboard" class="btn btn-secondary ripple">Lihat Dashboard</a>
+
+          <!-- Kolom 4: Navigasi -->
+          <div class="footer-nav-col">
+            <nav class="footer-nav-list">
+              <a href="#beranda" class="footer-nav-link">Beranda</a>
+              <a href="#tentang" class="footer-nav-link">Tentang</a>
+              <a href="#keahlian" class="footer-nav-link">Keahlian</a>
+              <a href="#portfolio" class="footer-nav-link">Portfolio</a>
+              <a href="#cv" class="footer-nav-link">CV</a>
+            </nav>
           </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
 
-<!-- DASHBOARD -->
-<section id="dashboard" class="section dashboard-section">
-  <div class="container">
-    <div class="section-header reveal">
-      <span class="section-badge">Progres</span>
-      <h2>Dashboard <span class="gradient-text">Belajar</span></h2>
-      <p>Pantau perkembangan belajarmu di sini</p>
-    </div>
-    <div class="dashboard-grid">
-      <div class="dash-card reveal" data-delay="0">
-        <div class="dash-icon">🏆</div>
-        <div class="dash-info">
-          <span class="dash-label">Nilai Tertinggi</span>
-          <span class="dash-value" id="dashBest">—</span>
         </div>
-      </div>
-      <div class="dash-card reveal" data-delay="100">
-        <div class="dash-icon">📊</div>
-        <div class="dash-info">
-          <span class="dash-label">Nilai Terakhir</span>
-          <span class="dash-value" id="dashLast">—</span>
-        </div>
-      </div>
-      <div class="dash-card reveal" data-delay="200">
-        <div class="dash-icon">🔄</div>
-        <div class="dash-info">
-          <span class="dash-label">Total Kuis</span>
-          <span class="dash-value" id="dashTotal">0</span>
-        </div>
-      </div>
-      <div class="dash-card reveal" data-delay="300">
-        <div class="dash-icon">✅</div>
-        <div class="dash-info">
-          <span class="dash-label">Rata-rata Nilai</span>
-          <span class="dash-value" id="dashAvg">—</span>
-        </div>
-      </div>
-    </div>
-    <div class="dash-progress-section reveal">
-      <h3>Progress Penguasaan Materi</h3>
-      <div class="progress-bars">
-        <div class="pb-item">
-          <span>Unsur-Unsur Lingkaran</span>
-          <div class="pb-bar"><div class="pb-fill" data-width="90"></div></div>
-          <span class="pb-pct">90%</span>
-        </div>
-        <div class="pb-item">
-          <span>Keliling & Luas</span>
-          <div class="pb-bar"><div class="pb-fill" data-width="85"></div></div>
-          <span class="pb-pct">85%</span>
-        </div>
-        <div class="pb-item">
-          <span>Sudut Pusat & Keliling</span>
-          <div class="pb-bar"><div class="pb-fill" data-width="75"></div></div>
-          <span class="pb-pct">75%</span>
-        </div>
-        <div class="pb-item">
-          <span>Persamaan Lingkaran</span>
-          <div class="pb-bar"><div class="pb-fill" data-width="65"></div></div>
-          <span class="pb-pct">65%</span>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
 
-<!-- FAKTA MENARIK -->
-<section id="fakta" class="section fakta-section">
-  <div class="container">
-    <div class="section-header reveal">
-      <span class="section-badge">Tahukah Kamu?</span>
-      <h2>Fakta Menarik <span class="gradient-text">Lingkaran</span></h2>
-      <p>Lingkaran lebih dari sekadar bangun datar — ia ada di mana-mana!</p>
-    </div>
-    <div class="fakta-timeline">
-      <div class="fakta-item reveal" data-delay="0">
-        <div class="fakta-dot"></div>
-        <div class="fakta-card">
-          <div class="fakta-emoji">🌍</div>
-          <h4>Bumi & Planet</h4>
-          <p>Orbit planet mengelilingi matahari berbentuk elips yang mendekati lingkaran. Bumi sendiri berbentuk bola (sphere) yang penampangnya adalah lingkaran.</p>
+        <!-- Bottom bar -->
+        <div class="footer-divider"></div>
+        <div class="footer-bottom">
+          <p>&copy; 2026 Nauval Ikram Wicaksono &mdash; Semua hak dilindungi.</p>
+          <button class="btn-top" onclick="window.scrollTo({top:0,behavior:'smooth'})">
+            Kembali ke Atas
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m18 15-6-6-6 6"/></svg>
+          </button>
         </div>
-      </div>
-      <div class="fakta-item reveal" data-delay="100">
-        <div class="fakta-dot"></div>
-        <div class="fakta-card">
-          <div class="fakta-emoji">🏛️</div>
-          <h4>Arsitektur Kuno</h4>
-          <p>Colosseum Roma, Pantheon, dan kubah-kubah masjid megah menggunakan prinsip lingkaran dan busur untuk menciptakan struktur yang kuat dan indah.</p>
-        </div>
-      </div>
-      <div class="fakta-item reveal" data-delay="200">
-        <div class="fakta-dot"></div>
-        <div class="fakta-card">
-          <div class="fakta-emoji">📡</div>
-          <h4>Teknologi Modern</h4>
-          <p>Antena parabola, lensa kamera, radar, dan sinyal WiFi semuanya memanfaatkan sifat matematis lingkaran dan parabola untuk memfokuskan gelombang.</p>
-        </div>
-      </div>
-      <div class="fakta-item reveal" data-delay="300">
-        <div class="fakta-dot"></div>
-        <div class="fakta-card">
-          <div class="fakta-emoji">🎡</div>
-          <h4>Kehidupan Sehari-hari</h4>
-          <p>Roda, koin, jam, piring, tutup botol, CD/DVD, ban kendaraan — semua menggunakan bentuk lingkaran karena efisiensi dan simetrinya yang sempurna.</p>
-        </div>
-      </div>
-      <div class="fakta-item reveal" data-delay="400">
-        <div class="fakta-dot"></div>
-        <div class="fakta-card">
-          <div class="fakta-emoji">🔢</div>
-          <h4>Misteri Pi (π)</h4>
-          <p>Nilai π = 3,14159265... adalah bilangan irasional yang tidak pernah berulang. Rekor dunia menghafal π mencapai lebih dari 70.000 digit!</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
 
-<!-- PENUTUP -->
-<section id="penutup" class="section penutup-section">
-  <div class="container">
-    <div class="penutup-content reveal">
-      <div class="penutup-badge">✦ Selesai Belajar</div>
-      <h2>Kamu Sudah Menguasai<br/><span class="gradient-text">Materi Lingkaran!</span></h2>
-      <p class="penutup-desc">Matematika bukan tentang menghafal rumus, tapi tentang memahami pola dan logika. Lingkaran mengajarkan kita bahwa kesempurnaan ada dalam kesederhanaan.</p>
-      <div class="penutup-summary">
-        <div class="ps-item"><span>✓</span> Unsur-unsur lingkaran</div>
-        <div class="ps-item"><span>✓</span> Keliling dan luas</div>
-        <div class="ps-item"><span>✓</span> Sudut pusat & keliling</div>
-        <div class="ps-item"><span>✓</span> Persamaan lingkaran</div>
-      </div>
-      <div class="penutup-buttons">
-        <a href="#beranda" class="btn btn-primary ripple">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>
-          Ulangi Belajar
-        </a>
-        <a href="#kuis" class="btn btn-secondary ripple">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
-          Kerjakan Kuis Lagi
-        </a>
       </div>
     </div>
-  </div>
-</section>
+  </footer>
 
-<!-- FOOTER -->
-<footer class="footer">
-  <div class="footer-glow"></div>
-  <div class="container">
-    <div class="footer-top">
-      <div class="footer-brand">
-        <div class="nav-logo">
-          <svg width="28" height="28" viewBox="0 0 32 32"><circle cx="16" cy="16" r="13" fill="none" stroke="url(#fg)" stroke-width="2.5"/><circle cx="16" cy="16" r="5" fill="url(#fg)"/><defs><linearGradient id="fg" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#6C63FF"/><stop offset="100%" stop-color="#00D4FF"/></linearGradient></defs></svg>
-          <span>Bunder<strong>Math</strong></span>
-        </div>
-        <p>Media pembelajaran matematika interaktif untuk siswa SMA/SMK. Belajar lebih menyenangkan dengan visualisasi modern.</p>
-      </div>
-      <div class="footer-links">
-        <h4>Navigasi</h4>
-        <ul>
-          <li><a href="#beranda">Beranda</a></li>
-          <li><a href="#materi">Materi</a></li>
-          <li><a href="#visualisasi">Visualisasi</a></li>
-          <li><a href="#kuis">Kuis</a></li>
-        </ul>
-      </div>
-      <div class="footer-info">
-        <h4>Informasi</h4>
-        <ul>
-          <li>📚 Mata Pelajaran: Matematika</li>
-          <li>🎓 Tingkat: SMA/SMK</li>
-          <li>📖 Materi: Lingkaran</li>
-          <li>🗓️ Tahun: 2025/2026</li>
-        </ul>
-      </div>
-    </div>
-    <div class="footer-bottom">
-      <div class="footer-credit">
-        <p>Dibuat oleh <strong>Nauval Ikram Wicaksono</strong> — Kelas <strong>XI SIJA 1</strong></p>
-        <p><strong>SMK Negeri 7 Semarang</strong></p>
-      </div>
-      <p class="footer-copy">© 2025 BunderMath. Hak Cipta Dilindungi.</p>
-    </div>
-  </div>
-</footer>
-
-<!-- Confetti Canvas -->
-<canvas id="confettiCanvas" style="position:fixed;top:0;left:0;width:100%;height:100%;pointer-events:none;z-index:9999;display:none;"></canvas>
-
-<script src="script.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>

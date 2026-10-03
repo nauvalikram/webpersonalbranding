@@ -1,4 +1,4 @@
-/* =============================================
+﻿/* =============================================
    PORTFOLIO NAUVAL IKRAM WICAKSONO
    Elegant Dark Theme with Emerald Accent
    ============================================= */
@@ -2236,4 +2236,23 @@ a.footer-contact-item:hover {
   .nav-hamburger {
     display: flex;
   }
+}
+
+/* ---- HOBBY BG IMAGE ---- */
+.hobby-showcase-bg {
+  position: absolute;
+  inset: 0;
+}
+.hobby-bg-img {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  opacity: 0.25;
+  transition: opacity 0.5s ease, transform 0.6s ease;
+  transform: scale(1.05);
+}
+.hobby-showcase-item:hover .hobby-bg-img {
+  opacity: 0.55;
+  transform: scale(1.12);
 }
